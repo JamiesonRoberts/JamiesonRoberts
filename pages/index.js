@@ -1,5 +1,5 @@
-function HomePage() {
-    return <div>Getting things started.</div>
-}
+import MyLayout from '../layouts/default';
 
-export default HomePage
+const HomePage = () => <div>Getting things started.</div>
+
+export default HomePage;
