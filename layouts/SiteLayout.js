@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default ({ children }) => {
+export default function SiteLayout({ children }) {
     return (
         <div className={'test'}>
             {children}

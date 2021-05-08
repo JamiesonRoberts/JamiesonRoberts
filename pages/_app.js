@@ -1,8 +1,12 @@
 import React from 'react';
-import Default from '../layouts/default';
+
+import SiteLayout from 'layouts/SiteLayout';
+import 'layouts/baseline.css';
 
 export default function MyApp({ Component, pageProps }) {
-    const getLayout = Component.getLayout || (page => <Default>{page}</Default>);
-
-    return getLayout(<Component {...pageProps} />);
+    return (
+        <SiteLayout>
+            <Component {...pageProps} />
+        </SiteLayout>
+    );
 }

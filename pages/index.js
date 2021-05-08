@@ -1,5 +1,12 @@
-import MyLayout from '../layouts/default';
+import Head from 'next/head';
 
-const HomePage = () => <div>Getting things started.</div>
-
-export default HomePage;
+export default function Index() {
+    return (
+        <>
+            <Head>
+                <title key='title'>Test Title</title>
+            </Head>
+            <div>Test</div>
+        </>
+    )
+}
