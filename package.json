@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": ""
+    "lint": "eslint \"*/**/*.{js,jsx}\"",
+    "lint-fix": "eslint \"*/**/*.{js,jsx}\" --fix",
+    "format": "prettier --write \"{,!(node_modules)/**/}*.{js,jsx}\"",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -25,7 +28,16 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
-    "prettier": "2.2.1"
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.2.1"
   }
 }
