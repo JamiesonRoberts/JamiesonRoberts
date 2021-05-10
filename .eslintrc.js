@@ -10,6 +10,8 @@ module.exports = {
   plugins: ['simple-import-sort'],
   rules: {
     'no-console': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
   overrides: [
     // This configuration will apply only to TypeScript files
@@ -31,6 +33,7 @@ module.exports = {
         'plugin:security/recommended', // Security rules
         'plugin:prettier/recommended', // Prettier plugin
       ],
+      plugins: ['simple-import-sort'],
       rules: {
         // We will use TypeScript's types for component props instead
         'react/prop-types': 'off',
@@ -47,6 +50,9 @@ module.exports = {
         // I suggest this setting for requiring return types on functions only where useful
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
 
         'prettier/prettier': [
           'error',
