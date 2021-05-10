@@ -6,13 +6,22 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}'",
+    "lint-fix": "eslint  --fix '*/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json}'",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JamiesonRoberts/JamiesonRoberts.git"
   },
-  "author": "",
+  "author": {
+    "name": "Jamieson Roberts",
+    "email": "hello@jamiesonroberts.com",
+    "url": "https://jamiesonroberts.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JamiesonRoberts/JamiesonRoberts/issues"
@@ -22,5 +31,26 @@
     "next": "^10.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^15.0.2",
+    "@types/react": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
   }
 }
