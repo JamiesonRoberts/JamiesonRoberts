@@ -4,12 +4,17 @@ module.exports = {
     node: true,
     es6: true,
   },
-  parserOptions: { ecmaVersion: 8 }, // to enable features such as async/await
+  parserOptions: {
+    ecmaVersion: 8,
+    sourceType: 'module',
+  },
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js'], // We don't want to lint generated files nor node_modules, but we want to lint .prettierrc.js (ignored by default by eslint)
   extends: ['eslint:recommended'],
   plugins: ['simple-import-sort'],
   rules: {
     'no-console': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
   },
   overrides: [
     // This configuration will apply only to TypeScript files
@@ -31,6 +36,7 @@ module.exports = {
         'plugin:security/recommended', // Security rules
         'plugin:prettier/recommended', // Prettier plugin
       ],
+      plugins: ['simple-import-sort'],
       rules: {
         // We will use TypeScript's types for component props instead
         'react/prop-types': 'off',
@@ -47,6 +53,9 @@ module.exports = {
         // I suggest this setting for requiring return types on functions only where useful
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+        'simple-import-sort/imports': 'error',
+        'simple-import-sort/exports': 'error',
 
         'prettier/prettier': [
           'error',

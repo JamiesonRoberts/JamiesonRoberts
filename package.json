@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/JamiesonRoberts/JamiesonRoberts#readme",
   "dependencies": {
+    "@sentry/nextjs": "^6.3.6",
+    "@sentry/tracing": "^6.3.6",
     "next": "^10.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

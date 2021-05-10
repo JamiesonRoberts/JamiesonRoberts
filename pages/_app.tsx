@@ -1,8 +1,8 @@
-import React from 'react'
+import '@/layouts/baseline.css'
 
-import SiteLayout from '../layouts/SiteLayout'
-import '../layouts/baseline.css'
 import { AppProps } from 'next/app'
+
+import SiteLayout from '@/layouts/SiteLayout'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
