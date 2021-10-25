@@ -1,13 +1,25 @@
-// This file sets a custom webpack configuration to use your Next.js app
-// with Sentry.
-// https://nextjs.org/docs/api-reference/next.config.js/introduction
-// https://docs.sentry.io/platforms/javascript/guides/nextjs/
+const { withSentryConfig } = require("@sentry/nextjs");
 
-const { withSentryConfig } = require('@sentry/nextjs');
+const withPlugins = require("next-compose-plugins");
 
-const moduleExports = {
-  // Your existing module.exports
+const { withPlausibleProxy } = require("next-plausible");
+
+const nextConfig = {
+  i18n: {
+    // These are all the locales you want to support in
+    // your application
+    locales: ["en-CA"],
+    // This is the default locale you want to be used when visiting
+    // a non-locale prefixed path e.g. `/hello`
+    defaultLocale: "en-CA"
+  }
 };
+
+const moduleExports = withPlugins([
+  withPlausibleProxy({
+    subdirectory: "analytics"
+  })
+], nextConfig);
 
 const sentryWebpackPluginOptions = {
   // Additional config options for the Sentry Webpack plugin. Keep in mind that
@@ -16,7 +28,7 @@ const sentryWebpackPluginOptions = {
   //   release, url, org, project, authToken, configFile, stripPrefix,
   //   urlPrefix, include, ignore
 
-  silent: true, // Suppresses all logs
+  silent: true // Suppresses all logs
   // For all available options, see:
   // https://github.com/getsentry/sentry-webpack-plugin#options.
 };
