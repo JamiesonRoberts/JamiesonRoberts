@@ -3,13 +3,14 @@ import App from 'next/app'
 import PlausibleProvider from 'next-plausible'
 
 class MyApp extends App {
-    render() {
+    render () {
         const {
             Component,
             pageProps
         } = this.props
         return (
-            <PlausibleProvider domain='jamiesonroberts.com' trackOutboundLinks={true}>
+            <PlausibleProvider domain='jamiesonroberts.com'
+                               trackOutboundLinks={true}>
                 <Component {...pageProps} />
             </PlausibleProvider>
         )
