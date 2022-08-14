@@ -1,6 +1,9 @@
-import React from 'react'
 import App from 'next/app'
+
 import PlausibleProvider from 'next-plausible'
+import { ThemeProvider } from 'next-themes'
+
+import '../styles/styles.css'
 
 class MyApp extends App {
     render () {
@@ -11,7 +14,9 @@ class MyApp extends App {
         return (
             <PlausibleProvider domain='jamiesonroberts.com'
                                trackOutboundLinks={true}>
-                <Component {...pageProps} />
+                <ThemeProvider>
+                    <Component {...pageProps} />
+                </ThemeProvider>
             </PlausibleProvider>
         )
     }
