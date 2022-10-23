@@ -22,10 +22,10 @@ export default function Header (props) {
                       90vw"
                 priority
             />
-            <h1>{'Hi, I\'m Jamieson Roberts.'}<br />{'I\'m a creator.'}</h1>
+            <h1>Hi, I&apos;m Jamieson Roberts. I&apos;m a creator.</h1>
             <p>I have over 15 years professional experience with web and
                 software
-                development. I'm currently a Senior Front End Developer at
+                development. I&apos;m currently a Senior Front End Developer at
                 SAXX.</p>
             <nav role={'navigation'} id={'nav'}
                  aria-label={'Navigation for page Subsections'}></nav>
