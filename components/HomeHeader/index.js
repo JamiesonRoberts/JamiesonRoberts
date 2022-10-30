@@ -15,12 +15,11 @@ export default function Header (props) {
                     alt='A grayscale image of Jamieson Roberts in a dark collared shirt appearing in front of a white background wall.'
                     width={320}
                     height={320}
-                    placeholder='blur'
                     layout={'responsive'}
                     className={styles.profileImage}
                     sizes='(min-width: 350px) 320w,
                           90vw'
-                    priority
+                    priority={true}
                 />
                 <div className={styles.copy}>
                     <h1>Hi, I&apos;m Jamieson Roberts.</h1>
