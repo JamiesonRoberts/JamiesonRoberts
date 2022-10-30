@@ -7,6 +7,12 @@ const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
   // Your existing module.exports
+  sentry: {
+    // See the 'Configure Source Maps' and 'Configure Legacy Browser Support'
+    // sections below for information on the following options:
+    hideSourceMaps: true,
+    autoInstrumentServerFunctions: false,
+  }
 };
 
 const sentryWebpackPluginOptions = {
