@@ -4,7 +4,7 @@
         "header"
         "main"
         "footer"
-    ;
+;
     grid-template-rows: auto 1fr auto;
     position: relative;
     min-height: 100vh;
@@ -14,10 +14,6 @@
     grid-area: header;
     background-color: var(--background-color);
     color: var(--color);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .main {
@@ -34,22 +30,4 @@
     padding: 1.5rem;
     text-align: center;
     font-size: 0.875rem;
-    line-height: 2rem;
-}
-
-@media (min-width: 56.25rem) {
-    .layout {
-        grid-template-areas:
-            "header main"
-            "header footer"
-    ;
-        grid-template-columns: minmax(27.5rem, 1fr) 3fr;
-        grid-template-rows: 1fr auto;
-    }
-
-    .header {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
 }
