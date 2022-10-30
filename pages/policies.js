@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import GenericHeader from '../components/GenericHeader'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
@@ -11,9 +9,6 @@ function Home () {
         <div className={styles.layout}>
             <GenericHeader className={styles.header} data-color-scheme={'light'}>
                 <h1>Policies</h1>
-                <Link href={'/'} passHref>
-                    <a title={'Link back to the home page'} className={'ctaButton'}>&larr;&nbsp;Back</a>
-                </Link>
             </GenericHeader>
             <Main className={styles.main} data-color-scheme={'dark'}>
                 <h2>Accessibility Policy</h2>
