@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import profilePic from '../../public/headshot.jpg'
 import styles from './index.module.css'
