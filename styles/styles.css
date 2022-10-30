@@ -1,3 +1,67 @@
+:root {
+    --box-shadow-25: 0px 0px 1rem 1px #B0B0B0;
+    --box-shadow-50: 0px 0px 1rem 1px #808080;
+    --box-shadow-75: 0px 0px 1rem 1px #404040;
+}
+
+[data-color-scheme='light'] {
+    --background-color: #F7F7F7;
+    --color: #1c1c1b;
+    --link-color: #006e90;
+}
+
+[data-color-scheme='dark'] {
+    --background-color: #1c1c1b;
+    --color: #FFFFFF;
+    --link-color: #4F9D69;
+}
+
+a {
+    color: var(--link-color);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    min-height: 100vh;
+}
+
 body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+#__next {
+    min-height: 100vh;
+}
+
+p {
+    margin: 0 0 1rem 0;
+    line-height: 1.75;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.wrapper {
+    max-width: 75rem;
     margin: 0 auto;
+    padding: 1rem;
+}
+
+.ctaButton {
+    background-color: var(--link-color);
+    color: var(--background-color);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.ctaButton:hover, .ctaButton:focus {
+    background-color: var(--color);
 }
