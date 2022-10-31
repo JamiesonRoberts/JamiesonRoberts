@@ -1,4 +1,5 @@
 import App from 'next/app'
+import { Roboto } from '@next/font/google'
 
 import PlausibleProvider from 'next-plausible'
 
