@@ -17,8 +17,6 @@ export default function Header (props) {
                     height={320}
                     layout={'responsive'}
                     className={styles.profileImage}
-                    sizes='(min-width: 350px) 320w,
-                          90vw'
                     priority={true}
                 />
                 <div className={styles.copy}>
