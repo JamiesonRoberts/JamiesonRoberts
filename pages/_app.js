@@ -25,9 +25,6 @@ const SiteLayout = ({ children }) => {
                         "@id": "https://jamiesonroberts.com/#person",
                         "name": "Jamieson Roberts",
                         "nationality": "Canadian",
-                        "hasOccupation": {
-                            "@id": "#occupation"
-                        },
                         "hasOfferCatalog": {
                             "@id": "#OfferCatalog"
                         },
@@ -121,19 +118,19 @@ const SiteLayout = ({ children }) => {
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{
                     __html: `{
-                        '@context': 'http://schema.org',
-                        '@type': 'WebSite',
-                        '@id': 'https://jamiesonroberts.com/#website',
-                        'url': 'https://jamiesonroberts.com',
-                        'image': 'TBD',
-                        'inLanguage': 'en-CA',
-                        'author': 'Jamieson Roberts',
-                        'keywords': 'Jamieson Roberts',
-                        'accountablePerson': {
-                            '@id': 'https://jamiesonroberts.com/#person'
+                        "@context": "http://schema.org",
+                        "@type": "WebSite",
+                        "@id": "https://jamiesonroberts.com/#website",
+                        "url": "https://jamiesonroberts.com",
+                        "image": "TBD",
+                        "inLanguage": "en-CA",
+                        "author": "Jamieson Roberts",
+                        "keywords": "Jamieson Roberts",
+                        "accountablePerson": {
+                            "@id": "https://jamiesonroberts.com/#person"
                         },
-                        'about': {
-                            '@id': 'https://jamiesonroberts.com/#person'
+                        "about": {
+                            "@id": "https://jamiesonroberts.com/#person"
                         }
                     }`
                 }}
