@@ -37,7 +37,7 @@ export default function Header (props) {
                 </div>
             </div>
             <div className={styles.connections}>
-                <ul aria-label={'A list of other websites that Jamieson is active on, links will open new tabs or windows.'}>
+                <ul aria-label={'A list of other websites and services that Jamieson is active on, links will open new tabs or windows.'}>
                     <li>Twitter</li>
                     <li>Facebook</li>
                     <li>Instagram</li>
