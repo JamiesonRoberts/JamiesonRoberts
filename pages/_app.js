@@ -28,15 +28,6 @@ const SiteLayout = ({ children }) => {
                         "hasOfferCatalog": {
                             "@id": "#OfferCatalog"
                         },
-                        "birthPlace": {
-                            "@type": "Place",
-                            "address": {
-                                "@type": "PostalAddress",
-                                "addressLocality": "London",
-                                "addressRegion": "ON",
-                                "addressCountry": "Canada"
-                            }
-                        },
                         "alumniOf": [
                             {
                                 "@type": "CollegeOrUniversity",
@@ -126,7 +117,7 @@ const SiteLayout = ({ children }) => {
                         "@type": "WebSite",
                         "@id": "https://jamiesonroberts.com/#website",
                         "url": "https://jamiesonroberts.com",
-                        "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
+                        "image": "/headshot.jpg",
                         "inLanguage": "en-CA",
                         "author": "Jamieson Roberts",
                         "keywords": "Jamieson Roberts",
