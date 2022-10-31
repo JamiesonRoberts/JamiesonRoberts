@@ -2,6 +2,7 @@
     --box-shadow-25: 0px 0px 1rem 1px #B0B0B0;
     --box-shadow-50: 0px 0px 1rem 1px #808080;
     --box-shadow-75: 0px 0px 1rem 1px #404040;
+    --primary-font: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 [data-color-scheme='light'] {
@@ -22,7 +23,7 @@ a {
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--primary-font);
     text-rendering: optimizeLegibility;
 }
 
