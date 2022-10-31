@@ -52,14 +52,18 @@ const SiteLayout = ({ children }) => {
                                 "@type": "Organization",
                                 "name": "SAXX Underwear Co.",
                                 "sameAs": [
-                                    "https://twitter.com/saxxunderwear"
+                                    "https://www.saxxunderwear.com/",
+                                    "https://www.saxxunderwear.ca/",
+                                    "https://intl.saxx.com/",
+                                    "https://www.instagram.com/saxxunderwear/",
+                                    "https://www.facebook.com/Saxxunderwear",
+                                    "https://twitter.com/saxxunderwear",
+                                    "https://www.linkedin.com/company/saxx-underwear-co-/about/"
                                 ]
                             }
                         ],
-                        "workLocation": [
-                        ],
                         "url": "https://jamiesonroberts.com",
-                        "image": "TBD",
+                        "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "London",
@@ -122,7 +126,7 @@ const SiteLayout = ({ children }) => {
                         "@type": "WebSite",
                         "@id": "https://jamiesonroberts.com/#website",
                         "url": "https://jamiesonroberts.com",
-                        "image": "TBD",
+                        "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
                         "inLanguage": "en-CA",
                         "author": "Jamieson Roberts",
                         "keywords": "Jamieson Roberts",
