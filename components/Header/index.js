@@ -10,7 +10,7 @@ import {
     faDev,
     faDiscord,
     faSteam,
-    faBattleNet,
+    faTwitch,
 } from '@fortawesome/free-brands-svg-icons'
 
 import profilePic from '../../public/headshot.jpg'
@@ -70,7 +70,7 @@ export default function Header(props) {
             >
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'https://github.com/JamiesonRoberts'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                         alt={'Connect with Jamieson on Github'}
@@ -87,7 +87,7 @@ export default function Header(props) {
                 </li>
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'https://dev.to/jamiesonroberts'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                         alt={'Connect with Jamieson on dev.to'}
@@ -138,7 +138,7 @@ export default function Header(props) {
                 </li>
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'https://www.facebook.com/jamieson.roberts/'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                         alt={'Connect with Jamieson on Facebook'}
@@ -155,7 +155,7 @@ export default function Header(props) {
                 </li>
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'https://www.instagram.com/jamiesonroberts/'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                         alt={'Connect with Jamieson on Instagram'}
@@ -172,7 +172,7 @@ export default function Header(props) {
                 </li>
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'http://discordapp.com/users/184527849850535936'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                         alt={'Connect with Jamieson on Discord'}
@@ -189,7 +189,7 @@ export default function Header(props) {
                 </li>
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'https://steamcommunity.com/id/jedispara/'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
                         alt={
@@ -209,21 +209,18 @@ export default function Header(props) {
                 </li>
                 <li className={styles.externalLinkItem}>
                     <Link
-                        href={'https://twitter.com/JamiesonRoberts'}
+                        href={'https://www.twitch.tv/jedispara'}
                         target={'_blank'}
                         rel={'noopener noreferrer'}
-                        alt={
-                            'Connect with Jamieson playing video games on Battle.Net'
-                        }
+                        alt={'Connect with Jamieson on Twitch.tv'}
                     >
                         <FontAwesomeIcon
-                            icon={faBattleNet}
+                            icon={faTwitch}
                             ariaHidden={true}
                             focusable={false}
                         />
                         <span className={'sr-only'}>
-                            Connect with Jamieson playing video games on
-                            Battle.net in a new window
+                            Connect with Jamieson on Twitch.tv
                         </span>
                     </Link>
                 </li>
