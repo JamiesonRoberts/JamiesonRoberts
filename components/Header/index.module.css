@@ -15,6 +15,12 @@
     gap: 1rem;
 }
 
-.externalLinkItem {
-    font-size: 2rem;
+.externalLink {
+    display: flex;
+    align-items: center;
+}
+
+.externalLinkSVGIcon {
+    height: 2rem;
+    width: auto;
 }
