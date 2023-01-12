@@ -19,6 +19,7 @@ export default function Header(props) {
                 alt='A blue circle with the letters JR over top of the background.'
                 width={75}
                 height={75}
+                sizes={'75px'}
                 priority={false}
             />
         </footer>

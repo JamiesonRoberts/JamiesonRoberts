@@ -26,6 +26,7 @@ export default function Header(props) {
                 width={320}
                 height={320}
                 className={styles.profileImage}
+                sizes={'(min-width: 480px) 400px, 82vw'}
                 layout={'responsive'}
                 priority={true}
             />
