@@ -7,7 +7,7 @@ export default function StructuredData() {
                     __html: `{
                         "@context": "http://www.schema.org",
                         "@type": "Person",
-                        "@id": "https://jamiesonroberts.com/#person",
+                        "@id": "${process.env.SITE_PUBLIC_URL}/#person",
                         "name": "Jamieson Roberts",
                         "nationality": "Canadian",
                         "hasOfferCatalog": {
@@ -38,7 +38,7 @@ export default function StructuredData() {
                                 ]
                             }
                         ],
-                        "url": "https://jamiesonroberts.com",
+                        "url": "${process.env.SITE_PUBLIC_URL}",
                         "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
                         "address": {
                             "@type": "PostalAddress",
@@ -47,7 +47,14 @@ export default function StructuredData() {
                             "addressCountry": "Canada"
                         },
                         "sameAs": [
-                            "https://twitter.com/jamiesonroberts"
+                            "https://twitter.com/jamiesonroberts",
+                            "https://github.com/JamiesonRoberts",
+                            "https://dev.to/jamiesonroberts",
+                            "https://www.linkedin.com/in/jamiesonroberts",
+                            "https://www.facebook.com/jamieson.roberts/",
+                            "https://www.instagram.com/jamiesonroberts/",
+                            "https://steamcommunity.com/id/jedispara/",
+                            "https://www.twitch.tv/jedispara"
                         ]
                     }`,
                 }}
@@ -100,17 +107,17 @@ export default function StructuredData() {
                     __html: `{
                         "@context": "http://schema.org",
                         "@type": "WebSite",
-                        "@id": "https://jamiesonroberts.com/#website",
-                        "url": "https://jamiesonroberts.com",
-                        "image": "https://jamiesonroberts.com/headshot.jpg",
+                        "@id": "${process.env.SITE_PUBLIC_URL}/#website",
+                        "url": "${process.env.SITE_PUBLIC_URL}",
+                        "image": "${process.env.SITE_PUBLIC_URL}/headshot.jpg",
                         "inLanguage": "en-CA",
                         "author": "Jamieson Roberts",
                         "keywords": "Jamieson Roberts",
                         "accountablePerson": {
-                            "@id": "https://jamiesonroberts.com/#person"
+                            "@id": "${process.env.SITE_PUBLIC_URL}/#person"
                         },
                         "about": {
-                            "@id": "https://jamiesonroberts.com/#person"
+                            "@id": "${process.env.SITE_PUBLIC_URL}/#person"
                         }
                     }`,
                 }}
