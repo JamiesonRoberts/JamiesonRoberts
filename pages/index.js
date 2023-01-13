@@ -11,13 +11,50 @@ function Home() {
     return (
         <>
             <Head>
-                <title>
-                    {`Hi, I'm Jamieson Roberts. I create digital things.`}
-                </title>
+                <title>{`Hi, I'm Jamieson Roberts. I create digital things.`}</title>
                 <meta
-                    name={'description'}
-                    content={`Father, geek, gamer, beer aficionado, coffee enthusiast, and sci-fi junky. I love to create things digitally and have over 15 years professional experience.`}
-                    key={'desc'}
+                    name='title'
+                    content="Hi, I'm Jamieson Roberts. I create digital things."
+                />
+                <meta
+                    name='description'
+                    content='Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.'
+                />
+
+                <meta property='og:type' content='website' />
+                <meta
+                    property='og:url'
+                    content='https://jamiesonroberts.com/'
+                />
+                <meta
+                    property='og:title'
+                    content="Hi, I'm Jamieson Roberts. I create digital things."
+                />
+                <meta
+                    property='og:description'
+                    content='Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.'
+                />
+                <meta
+                    property='og:image'
+                    content='https://jamiesonroberts.com/sharing-image.jpg'
+                />
+
+                <meta property='twitter:card' content='summary_large_image' />
+                <meta
+                    property='twitter:url'
+                    content='https://jamiesonroberts.com/'
+                />
+                <meta
+                    property='twitter:title'
+                    content="Hi, I'm Jamieson Roberts. I create digital things."
+                />
+                <meta
+                    property='twitter:description'
+                    content='Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.'
+                />
+                <meta
+                    property='twitter:image'
+                    content='https://jamiesonroberts.com/sharing-image.jpg'
                 />
 
                 <link
