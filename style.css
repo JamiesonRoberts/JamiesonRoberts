@@ -1,0 +1,255 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+body {
+  background: url(images/stardust2.png) repeat fixed;
+  background-color: transparent;
+  color: #EFEFEF;
+  position: relative;
+  height: 100%; }
+
+span.italics {
+  font-weight: 400;
+  font-style: italic; }
+
+strong {
+  font-weight: 500;
+  color: #4586B6; }
+
+a {
+  text-decoration: none;
+  padding: 0.25em;
+  margin: -0.25em; }
+  a:link, a:visited {
+    color: #6A71F5;
+    background-color: transparent;
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    transition: background-color 200ms linear; }
+  a:hover {
+    color: #FFF;
+    background-color: #8689B7; }
+
+#planet {
+  position: fixed;
+  z-index: -99;
+  top: 23em;
+  left: 44.44444%;
+  width: 10em;
+  height: 6.5em;
+  background-image: url(images/planet.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 10em 6.5em;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50); }
+
+#satelite {
+  position: fixed;
+  z-index: -99;
+  top: -25em;
+  left: 11.11111%;
+  width: 20em;
+  height: 20em;
+  background-image: url(images/satelite.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20em 20em;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50); }
+
+#constilation {
+  position: fixed;
+  z-index: -99;
+  top: 30em;
+  left: 77.77778%;
+  width: 11.11111%;
+  height: 10em;
+  background-image: url(images/constalation.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: alpha(opacity=60); }
+
+#alien {
+  position: fixed;
+  z-index: -99;
+  bottom: -35em;
+  left: 5.55556%;
+  width: 11.11111%;
+  height: 10em;
+  background-image: url(images/alien.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30); }
+
+/* Flythrough media queries */
+@media screen and (min-width: 61.5em) {
+  #alien {
+    bottom: -60em; } }
+@media screen and (min-width: 75em) {
+  #alien {
+    bottom: -52em; } }
+@media screen and (min-width: 105em) {
+  #alien {
+    bottom: -35em; } }
+header#header {
+  height: 100%; }
+  header#header h1 {
+    font-weight: 200;
+    font-size: 2.2em;
+    color: #DEDEDE;
+    background: #888888;
+    /* The Fallback */
+    background: rgba(136, 136, 136, 0.5); }
+  header#header h3 {
+    font-weight: 300;
+    margin-bottom: 0;
+    color: #4586B6;
+    text-transform: uppercase; }
+  header#header #headshot .image_rounded {
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    -ms-border-radius: 500px;
+    -o-border-radius: 500px;
+    border-radius: 500px;
+    border: 0.25em solid #4586B6;
+    overflow: hidden;
+    z-index: 99; }
+    header#header #headshot .image_rounded img {
+      vertical-align: middle; }
+  header#header #social-media li {
+    list-style: none;
+    float: left;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: transparent;
+    margin-bottom: 0.7em; }
+    header#header #social-media li a {
+      width: 3em;
+      height: 3em;
+      display: block;
+      border-bottom: none; }
+      header#header #social-media li a.tooltip {
+        position: relative; }
+      header#header #social-media li a.tooltip:hover:after {
+        background: #4586b6;
+        /* The Fallback */
+        background: rgba(69, 134, 182, 0.8);
+        bottom: 4.7em;
+        color: #fff;
+        content: attr(data);
+        left: 40%;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 98;
+        width: 15em;
+        text-indent: 0;
+        font-size: 65%;
+        line-height: 1.5em; }
+      header#header #social-media li a.tooltip:hover:before {
+        border: solid;
+        border-color: #4586B6 transparent;
+        border-color: rgba(69, 134, 182, 0.8) transparent;
+        border-width: 6px 6px 0 6px;
+        bottom: 2.7em;
+        content: "";
+        left: 50%;
+        position: absolute;
+        z-index: 99; }
+      header#header #social-media li a:hover {
+        background-color: transparent; }
+    header#header #social-media li:hover {
+      background-color: #494ea9;
+      -webkit-transition: background-color 150ms linear;
+      -moz-transition: background-color 150ms linear;
+      -ms-transition: background-color 150ms linear;
+      -o-transition: background-color 150ms linear;
+      transition: background-color 150ms linear; }
+    header#header #social-media li.codecademy {
+      background-image: url(social-icons/codecademy-128.png); }
+    header#header #social-media li.codeschool {
+      background-image: url(social-icons/codeschool-128.png); }
+    header#header #social-media li.email {
+      background-image: url(social-icons/email-128.png); }
+    header#header #social-media li.facebook {
+      background-image: url(social-icons/facebook-128.png); }
+    header#header #social-media li.foursquare {
+      background-image: url(social-icons/foursquare-128.png); }
+    header#header #social-media li.github {
+      background-image: url(social-icons/github-128.png); }
+    header#header #social-media li.googleplus {
+      background-image: url(social-icons/googleplus-128.png); }
+    header#header #social-media li.instagram {
+      background-image: url(social-icons/instagram-128.png); }
+    header#header #social-media li.linkedin {
+      background-image: url(social-icons/linkedin-128.png); }
+    header#header #social-media li.pinterest {
+      background-image: url(social-icons/pinterest-128.png); }
+    header#header #social-media li.skype {
+      background-image: url(social-icons/skype-128.png); }
+    header#header #social-media li.soundcloud {
+      background-image: url(social-icons/soundcloud-128.png); }
+    header#header #social-media li.steam {
+      background-image: url(social-icons/steam-128.png); }
+    header#header #social-media li.twitter {
+      background-image: url(social-icons/twitter-128.png); }
+    header#header #social-media li.vimeo {
+      background-image: url(social-icons/vimeo-128.png); }
+    header#header #social-media li.xbox {
+      background-image: url(social-icons/xbox-128.png); }
+  header#header #social-media + h3 {
+    clear: both;
+    padding-top: 0.25em; }
+  header#header p.avail span {
+    background-image: url(images/64-Clipboard.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 2em;
+    padding-left: 2.5em;
+    display: block;
+    min-height: 2em; }
+  header#header p.avail span::first-line {
+    line-height: 2em; }
+
+section#content article header h2 {
+  font-weight: 100;
+  color: #EFEFEF;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background: #8689b7;
+  /* The Fallback */
+  background: rgba(134, 137, 183, 0.5);
+  text-align: right;
+  clear: both; }
+section#content article .article-content {
+  font-weight: 200; }
+  section#content article .article-content ol.employment li, section#content article .article-content ol.community li {
+    list-style: none; }
+    section#content article .article-content ol.employment li h3, section#content article .article-content ol.community li h3 {
+      font-weight: bold;
+      margin-bottom: 0;
+      color: #888;
+      font-size: 0.8em;
+      text-transform: uppercase; }
+  section#content article .article-content ul.experience li {
+    list-style: none;
+    float: left; }
+
+footer {
+  clear: both;
+  text-align: center;
+  font-size: 70%; }
+  footer img {
+    max-width: 25%; }
