@@ -14,8 +14,7 @@ export default function Header(props) {
                 height={320}
                 className={styles.profileImage}
                 sizes={'(min-width: 480px) 400px, 82vw'}
-                priority={true}
-                placeholder={'blur'}
+                priority
             />
 
             <h1>Hi, I&apos;m Jamieson Roberts.</h1>
