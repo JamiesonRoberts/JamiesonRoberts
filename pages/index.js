@@ -36,7 +36,7 @@ function Home() {
                 />
                 <meta
                     property='og:image'
-                    content={`${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
+                    content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
                 />
 
                 <meta property='twitter:card' content='summary_large_image' />
