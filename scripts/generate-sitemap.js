@@ -9,7 +9,7 @@ function addPage(page) {
     const route = path === '/index' ? '' : path
 
     return `  <url>
-    <loc>${`https://${process.env.SITE_PUBLIC_URL}${route}`}</loc>
+    <loc>${`${process.env.SITE_PUBLIC_URL}${route}`}</loc>
     <changefreq>daily</changefreq>
   </url>`
 }
