@@ -36,7 +36,7 @@ function Home() {
                 />
                 <meta
                     property='og:image'
-                    content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
+                    content={`https://${process.env.SITE_PUBLIC_URL}/sharing-image.jpg`}
                 />
 
                 <meta property='twitter:card' content='summary_large_image' />
@@ -54,7 +54,7 @@ function Home() {
                 />
                 <meta
                     property='twitter:image'
-                    content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
+                    content={`https://${process.env.SITE_PUBLIC_URL}/sharing-image.jpg`}
                 />
 
                 <link
@@ -76,7 +76,7 @@ function Home() {
                 />
                 <link
                     rel='manifest'
-                    href={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/site.webmanifest`}
+                    href={`https://${process.env.SITE_PUBLIC_URL}/site.webmanifest`}
                 />
                 <link
                     rel='mask-icon'
