@@ -20,7 +20,6 @@ export default function Header(props) {
                 width={75}
                 height={75}
                 sizes={'75px'}
-                priority={false}
             />
         </footer>
     )

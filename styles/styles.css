@@ -81,6 +81,7 @@ a:not(.cta):hover, a:not(.cta):focus {
     width:1px;
     height:1px;
     overflow:hidden;
+    color: var(--color);
 }
 
 .footer {
