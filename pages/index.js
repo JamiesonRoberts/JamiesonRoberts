@@ -24,7 +24,7 @@ function Home() {
                 <meta property='og:type' content='website' />
                 <meta
                     property='og:url'
-                    content='https://jamiesonroberts.com/'
+                    content={`${process.env.SITE_PUBLIC_URL}`}
                 />
                 <meta
                     property='og:title'
@@ -36,13 +36,13 @@ function Home() {
                 />
                 <meta
                     property='og:image'
-                    content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
+                    content={`${process.env.SITE_PUBLIC_URL}/sharing-image.jpg`}
                 />
 
                 <meta property='twitter:card' content='summary_large_image' />
                 <meta
                     property='twitter:url'
-                    content='https://jamiesonroberts.com/'
+                    content={`${process.env.SITE_PUBLIC_URL}`}
                 />
                 <meta
                     property='twitter:title'
@@ -54,33 +54,33 @@ function Home() {
                 />
                 <meta
                     property='twitter:image'
-                    content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
+                    content={`${process.env.SITE_PUBLIC_URL}/sharing-image.jpg`}
                 />
 
                 <link
                     rel='apple-touch-icon'
                     sizes='180x180'
-                    href='/apple-touch-icon.png'
+                    href={`${process.env.SITE_PUBLIC_URL}/apple-touch-icon.png`}
                 />
                 <link
                     rel='icon'
                     type='image/png'
                     sizes='32x32'
-                    href='/favicon-32x32.png'
+                    href={`${process.env.SITE_PUBLIC_URL}/favicon-32x32.png`}
                 />
                 <link
                     rel='icon'
                     type='image/png'
                     sizes='16x16'
-                    href='/favicon-16x16.png'
+                    href={`${process.env.SITE_PUBLIC_URL}/favicon-16x16.png`}
                 />
                 <link
                     rel='manifest'
-                    href={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/site.webmanifest`}
+                    href={`${process.env.SITE_PUBLIC_URL}/site.webmanifest`}
                 />
                 <link
                     rel='mask-icon'
-                    href='/safari-pinned-tab.svg'
+                    href={`${process.env.SITE_PUBLIC_URL}/safari-pinned-tab.svg`}
                     color='#4863a9'
                 />
                 <meta name='msapplication-TileColor' content='#ffffff' />
