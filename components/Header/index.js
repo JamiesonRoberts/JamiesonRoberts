@@ -20,10 +20,10 @@ export default function Header(props) {
             <h1>Hi, I&apos;m Jamieson Roberts.</h1>
             <p>
                 Parent, bicycle rider, geek, a video and board gamer, beer
-                aficionado, coffee junky, and sci-fi enthusiast. Full time
-                software engineer with over 15 years professional experience
-                with web and software development. I love to create things
-                digitally. Currently a Senior Front End Developer @{' '}
+                aficionado, coffee addict, and sci-fi junky. Full time software
+                engineer with over 15 years professional experience with web and
+                software development. I love to create things digitally.
+                Currently a Senior Front End Developer @{' '}
                 <a
                     href={'https://www.saxxunderwear.com/'}
                     rel={'noopener noreferrer'}
