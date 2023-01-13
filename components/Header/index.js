@@ -28,7 +28,6 @@ export default function Header(props) {
                     href={'https://www.saxxunderwear.com/'}
                     rel={'noopener noreferrer'}
                     target={'_blank'}
-                    title={'SAXX'}
                 >
                     SAXX
                 </a>

@@ -16,6 +16,22 @@
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        /* turns off smooth-scrolling behavior (if turned on) when prefers-reduced-motion is active*/
+        scroll-behavior: auto;
+    }
+
+    *:not(.animates-without-motion),
+    *:not(.animates-without-motion)::before,
+    *:not(.animates-without-motion)::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -74,14 +90,13 @@ a:not(.cta):hover, a:not(.cta):focus {
     color: var(--link-color);
 }
 
-.sr-only {
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    color: var(--color);
+.visually-hidden, .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
 }
 
 .footer {
