@@ -23,7 +23,12 @@ export default function Main({ children, ...rest }) {
                 <h3>Current</h3>
                 <div className={styles.cardList}>
                     <div className={styles.experienceCard}>
-                        <Image src={saxx} width={50} height={50} />
+                        <Image
+                            src={saxx}
+                            width={50}
+                            height={50}
+                            alt={'The logo for SAXX'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -36,7 +41,12 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                     <div className={styles.experienceCard}>
-                        <Image src={jrBadge} width={50} height={50} />
+                        <Image
+                            src={jrBadge}
+                            width={50}
+                            height={50}
+                            alt={'A blue circle with the letters JR in white'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -51,7 +61,12 @@ export default function Main({ children, ...rest }) {
                 <h3>Previous</h3>
                 <div className={styles.cardList}>
                     <div className={styles.experienceCard}>
-                        <Image src={arcane} width={50} height={50} />
+                        <Image
+                            src={arcane}
+                            width={50}
+                            height={50}
+                            alt={'The logo for Arcane'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -64,7 +79,12 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                     <div className={styles.experienceCard}>
-                        <Image src={western} width={50} height={61} />
+                        <Image
+                            src={western}
+                            width={50}
+                            height={61}
+                            alt={'The logo for Western University'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -77,7 +97,12 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                     <div className={styles.experienceCard}>
-                        <Image src={mld} width={50} height={50} />
+                        <Image
+                            src={mld}
+                            width={50}
+                            height={50}
+                            alt={'The Logo for MLD Solutions'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -96,7 +121,12 @@ export default function Main({ children, ...rest }) {
                 <h3>Current</h3>
                 <div className={styles.cardList}>
                     <div className={styles.experienceCard}>
-                        <Image src={lcl} width={50} height={50} />
+                        <Image
+                            src={lcl}
+                            width={50}
+                            height={50}
+                            alt={'The logo for London Cycle Link'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -111,7 +141,12 @@ export default function Main({ children, ...rest }) {
                 <h3>Past</h3>
                 <div className={styles.cardList}>
                     <div className={styles.experienceCard}>
-                        <Image src={cac} width={50} height={50} />
+                        <Image
+                            src={cac}
+                            width={50}
+                            height={50}
+                            alt={'The logo for the City of London, Canada'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -123,7 +158,12 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                     <div className={styles.experienceCard}>
-                        <Image src={projectPlay} width={50} height={50} />
+                        <Image
+                            src={projectPlay}
+                            width={50}
+                            height={50}
+                            alt={'The logo for Project Play'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -135,7 +175,12 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                     <div className={styles.experienceCard}>
-                        <Image src={learningCode} width={50} height={50} />
+                        <Image
+                            src={learningCode}
+                            width={50}
+                            height={50}
+                            alt={'The logo for Canada Learning Code'}
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}
@@ -148,7 +193,14 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                     <div className={styles.experienceCard}>
-                        <Image src={amabile} width={50} height={50} />
+                        <Image
+                            src={amabile}
+                            width={50}
+                            height={50}
+                            alt={
+                                'The logo for Amabile Choirs of London, Canada'
+                            }
+                        />
                         <div className={styles.experienceCardContent}>
                             <strong
                                 className={styles.experienceCardContentCompany}

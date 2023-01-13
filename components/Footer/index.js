@@ -16,7 +16,7 @@ export default function Header(props) {
             <p>Copyright &copy; 2023 Jamieson Roberts.</p>
             <Image
                 src={badge}
-                alt='A blue circle with the letters JR over top of the background.'
+                alt='A blue circle with the letters JR in white.'
                 width={75}
                 height={75}
                 sizes={'75px'}
