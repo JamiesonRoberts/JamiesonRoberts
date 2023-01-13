@@ -9,7 +9,7 @@ function addPage(page) {
     const route = path === '/index' ? '' : path
 
     return `  <url>
-    <loc>${`${process.env.NEXT_PUBLIC_VERCEL_URL}${route}`}</loc>
+    <loc>${`https://${process.env.NEXT_PUBLIC_VERCEL_URL}${route}`}</loc>
     <changefreq>daily</changefreq>
   </url>`
 }

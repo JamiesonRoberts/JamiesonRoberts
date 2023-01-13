@@ -54,7 +54,7 @@ function Home() {
                 />
                 <meta
                     property='twitter:image'
-                    content={`${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
+                    content={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/sharing-image.jpg`}
                 />
 
                 <link
@@ -76,7 +76,7 @@ function Home() {
                 />
                 <link
                     rel='manifest'
-                    href={`${process.env.NEXT_PUBLIC_VERCEL_URL}/site.webmanifest`}
+                    href={`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/site.webmanifest`}
                 />
                 <link
                     rel='mask-icon'
