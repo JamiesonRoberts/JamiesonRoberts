@@ -1,8 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import profilePic from '../../public/headshot.jpg'
 import styles from './index.module.css'
-import Link from 'next/link'
 
 export default function Header(props) {
     return (
@@ -14,7 +14,6 @@ export default function Header(props) {
                 height={320}
                 className={styles.profileImage}
                 sizes={'(min-width: 480px) 400px, 82vw'}
-                layout={'responsive'}
                 priority={true}
                 placeholder={'blur'}
             />
@@ -253,8 +252,7 @@ export default function Header(props) {
                             />
                         </svg>
                         <span className={'sr-only'}>
-                            Connect with Jamieson playing video games on Steam
-                            in a new window
+                            Connect with Jamieson on Steam in a new window
                         </span>
                     </Link>
                 </li>

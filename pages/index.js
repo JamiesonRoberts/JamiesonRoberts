@@ -58,7 +58,7 @@ function Home() {
             </Head>
             <div className={'layout'}>
                 <Header className={classNames('header', 'wrapper')} />
-                <Main className={classNames('main', 'wrapper')} />
+                <Main className={classNames('main')} />
                 <Footer className={classNames('footer', 'wrapper')} />
             </div>
             <StructuredData />
