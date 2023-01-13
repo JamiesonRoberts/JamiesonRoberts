@@ -138,7 +138,7 @@ export default function Main({ children, ...rest }) {
                         </div>
                     </div>
                 </div>
-                <h3>Past</h3>
+                <h3>Previous</h3>
                 <div className={styles.cardList}>
                     <div className={styles.experienceCard}>
                         <Image
