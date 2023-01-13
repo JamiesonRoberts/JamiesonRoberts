@@ -1,63 +1,91 @@
 :root {
-    --box-shadow-25: 0px 0px 1rem 1px #B0B0B0;
-    --box-shadow-50: 0px 0px 1rem 1px #808080;
-    --box-shadow-75: 0px 0px 1rem 1px #404040;
-}
-
-[data-color-scheme='light'] {
     --background-color: #F7F7F7;
     --color: #1c1c1b;
-    --link-color: #006e90;
+    --link-color: #4863A9;
 }
 
-[data-color-scheme='dark'] {
-    --background-color: #1c1c1b;
-    --color: #FFFFFF;
-    --link-color: #4F9D69;
-}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1c1c1b;
+        --color: #FFFFFF;
+        --link-color: #4392F1;
+    }
 
-a {
-    color: var(--link-color);
+    html {
+        color-scheme: dark;
+    }
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: var(--primary-font);
-    text-rendering: optimizeLegibility;
-}
-
-html {
-    min-height: 100vh;
 }
 
 body {
     margin: 0;
-    min-height: 100vh;
+    padding: 1rem;
+    min-height: calc(100vh - 2rem);
+    color: rgb(var(--color));
+    background: rgb(var(--background-color));
+    font-family: var(--roboto);
+    text-rendering: optimizeLegibility;
 }
 
 p {
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
     line-height: 1.75;
 }
 
-a {
+a:not(.cta) {
     color: var(--link-color);
+    transition: color 0.2s ease-in-out;
+}
+
+a:not(.cta):hover, a:not(.cta):focus {
+    color: var(--color);
+}
+
+.layout {
+    min-height: calc(100vh - 2rem);
 }
 
 .wrapper {
-    max-width: 75rem;
+    max-width: 55rem;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
-.ctaButton {
+.wrapper + .wrapper {
+    padding-top: 0.5rem;
+}
+
+.cta {
     background-color: var(--link-color);
     color: var(--background-color);
     padding: 0.75rem 1rem;
     text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
 }
 
-.ctaButton:hover, .ctaButton:focus {
+.cta:hover, .cta:focus {
     background-color: var(--color);
+    color: var(--link-color);
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    color: var(--color);
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 2rem;
 }

@@ -6,7 +6,14 @@
 const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
-  // Your existing module.exports
+  i18n: {
+    // These are all the locales you want to support in
+    // your application
+    locales: ['en-CA'],
+    // This is the default locale you want to be used when visiting
+    // a non-locale prefixed path e.g. `/hello`
+    defaultLocale: 'en-CA'
+  },
   sentry: {
     // See the 'Configure Source Maps' and 'Configure Legacy Browser Support'
     // sections below for information on the following options:

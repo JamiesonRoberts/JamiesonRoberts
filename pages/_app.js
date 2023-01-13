@@ -1,7 +1,5 @@
-import App from 'next/app'
-import { Roboto_Flex } from '@next/font/google'
-
 import PlausibleProvider from 'next-plausible'
+import { Roboto_Flex } from '@next/font/google'
 
 import '/styles/styles.css'
 
@@ -9,32 +7,23 @@ const roboto = Roboto_Flex({
     variable: '--primary-font',
     subsets: ['latin'],
     fallback: ['Helvetica Neue', 'Helvetica', 'sans-serif'],
-    display: 'swap'
+    display: 'swap',
 })
 
-const SiteLayout = ({ children }) => {
+const App = ({ Component, pageProps }) => {
     return (
-        <div className={roboto.variable}>
-            {children}
-        </div>
+        <PlausibleProvider
+            domain='jamiesonroberts.com'
+            trackOutboundLinks={true}
+        >
+            <style jsx global>{`
+                :root {
+                    --roboto: ${roboto.style.fontFamily};
+                }
+            `}</style>
+            <Component {...pageProps} />
+        </PlausibleProvider>
     )
 }
 
-class MyApp extends App {
-    render () {
-        const {
-            Component,
-            pageProps
-        } = this.props
-        return (
-            <PlausibleProvider domain='jamiesonroberts.com'
-                               trackOutboundLinks={true}>
-                <SiteLayout>
-                    <Component {...pageProps} />
-                </SiteLayout>
-            </PlausibleProvider>
-        )
-    }
-}
-
-export default MyApp
+export default App
