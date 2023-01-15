@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePlausible } from 'next-plausible'
 
 import profilePic from '../../public/headshot.jpg'
 import styles from './index.module.css'
 
 export default function Header(props) {
+    const plausible = usePlausible()
+
     return (
         <header {...props} className={props.className} role={'banner'}>
             <Image
@@ -39,9 +42,12 @@ export default function Header(props) {
             </p>
             <a
                 href={
-                    ' mailto:hello@jamiesonroberts.com?subject=Lets%20connect%20via%20email%20from%20jamiesonroberts.com '
+                    'mailto:hello@jamiesonroberts.com?subject=Lets%20connect%20via%20email%20from%20jamiesonroberts.com'
                 }
                 className={'cta'}
+                onClick={() => {
+                    plausible('Email Button: Click')
+                }}
             >
                 Let&apos;s Connect via email
             </a>
