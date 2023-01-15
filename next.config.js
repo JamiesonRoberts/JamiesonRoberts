@@ -20,13 +20,6 @@ const moduleExports = {
         hideSourceMaps: true,
         autoInstrumentServerFunctions: false,
     },
-    webpack: (config, { isServer }) => {
-        if (isServer) {
-            require('./scripts/generate-sitemap')
-        }
-
-        return config
-    },
 }
 
 const sentryWebpackPluginOptions = {
