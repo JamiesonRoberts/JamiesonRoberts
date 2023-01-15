@@ -18,9 +18,11 @@
 
 import * as Sentry from '@sentry/nextjs'
 import NextErrorComponent from 'next/error'
+import Head from 'next/head'
 import Image from 'next/image'
-import badge from '../public/jr-badge.png'
 import Link from 'next/link'
+
+import badge from '../public/jr-badge.png'
 
 const layoutStyles = {
     minHeight: 'calc(100vh - 2rem)',
@@ -36,17 +38,23 @@ const CustomErrorComponent = (props) => {
     // compensate for https://github.com/vercel/next.js/issues/8592
     // Sentry.captureUnderscoreErrorException(props);
     return (
-        <div style={layoutStyles}>
-            <Image
-                src={badge}
-                alt='A blue circle with the letters JR in white.'
-                width={75}
-                height={75}
-                sizes={'75px'}
-            />
-            <h1>{props.statusCode} - An error occurred</h1>
-            <Link href={'/'}>Return back to the main page</Link>
-        </div>
+        <>
+            <Head>
+                <title>{props.statusCode} - An Error Occurred</title>
+            </Head>
+
+            <main style={layoutStyles}>
+                <Image
+                    src={badge}
+                    alt='A blue circle with the letters JR in white.'
+                    width={75}
+                    height={75}
+                    sizes={'75px'}
+                />
+                <h1>{props.statusCode} - An Error Occurred</h1>
+                <Link href={'/'}>Return back to the main page</Link>
+            </main>
+        </>
     )
 }
 
