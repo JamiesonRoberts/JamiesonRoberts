@@ -53,6 +53,7 @@ function Home() {
                     property='twitter:image'
                     content='https://jamiesonroberts.com/sharing-image.jpg'
                 />
+                <link rel='canonical' href='https://jamiesonroberts.com' />
             </Head>
             <div className={'layout'}>
                 <Header className={classNames('header', 'wrapper')} />
