@@ -5,7 +5,7 @@ export default function StructuredData() {
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{
                     __html: `{
-                        "@context": "http://www.schema.org",
+                        "@context": "https://www.schema.org",
                         "@type": "Person",
                         "@id": "https://jamiesonroberts.com/#person",
                         "name": "Jamieson Roberts",
@@ -58,6 +58,7 @@ export default function StructuredData() {
                         ],
                         "url": "https://jamiesonroberts.com",
                         "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
+                        "logo": "https://jamiesonroberts.com/jr-badge.png",
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "London",
@@ -123,7 +124,7 @@ export default function StructuredData() {
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{
                     __html: `{
-                        "@context": "http://schema.org",
+                        "@context": "https://schema.org",
                         "@type": "WebSite",
                         "@id": "https://jamiesonroberts.com/#website",
                         "url": "https://jamiesonroberts.com/",
