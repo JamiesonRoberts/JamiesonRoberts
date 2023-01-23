@@ -58,7 +58,6 @@ export default function StructuredData() {
                         ],
                         "url": "https://jamiesonroberts.com",
                         "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
-                        "logo": "https://jamiesonroberts.com/jr-badge.png",
                         "address": {
                             "@type": "PostalAddress",
                             "addressLocality": "London",
