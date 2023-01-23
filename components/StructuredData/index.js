@@ -7,7 +7,7 @@ export default function StructuredData() {
                     __html: `{
                         "@context": "http://www.schema.org",
                         "@type": "Person",
-                        "@id": "${process.env.SITE_PUBLIC_URL}/#person",
+                        "@id": "https://jamiesonroberts.com/#person",
                         "name": "Jamieson Roberts",
                         "nationality": "Canadian",
                         "hasOfferCatalog": {
@@ -18,6 +18,24 @@ export default function StructuredData() {
                                 "@type": "CollegeOrUniversity",
                                 "name": "Western University",
                                 "sameAs": "https://www.uwo.ca/"
+                            }
+                        ],
+                        "hasCredential": [
+                            {
+                                "@type": "EducationalOccupationalCredential",
+                                "credentialCategory": "degree",
+                                "educationalLevel": "Bachelor",
+                                "about": {
+                                    "@type": "EducationalOccupationalProgram",
+                                    "educationalCredentialAwarded": "Bachelor of Musical Arts - Music",
+                                    "startDate": "2005",
+                                    "endDate": "2010",
+                                    "provider": {
+                                        "@type": "CollegeOrUniversity",
+                                        "name": "The University of Western Ontario",
+                                        "sameAs": "https://uwo.ca"
+                                    }
+                                }
                             }
                         ],
                         "gender": "Male",
@@ -38,7 +56,7 @@ export default function StructuredData() {
                                 ]
                             }
                         ],
-                        "url": "${process.env.SITE_PUBLIC_URL}",
+                        "url": "https://jamiesonroberts.com",
                         "image": "https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900",
                         "address": {
                             "@type": "PostalAddress",
@@ -107,17 +125,17 @@ export default function StructuredData() {
                     __html: `{
                         "@context": "http://schema.org",
                         "@type": "WebSite",
-                        "@id": "${process.env.SITE_PUBLIC_URL}/#website",
-                        "url": "${process.env.SITE_PUBLIC_URL}",
-                        "image": "${process.env.SITE_PUBLIC_URL}/headshot.jpg",
+                        "@id": "https://jamiesonroberts.com/#website",
+                        "url": "https://jamiesonroberts.com/",
+                        "image": "https://jamiesonroberts.com/headshot.jpg",
                         "inLanguage": "en-CA",
                         "author": "Jamieson Roberts",
                         "keywords": "Jamieson Roberts",
                         "accountablePerson": {
-                            "@id": "${process.env.SITE_PUBLIC_URL}/#person"
+                            "@id": "https://jamiesonroberts.com/#person"
                         },
                         "about": {
-                            "@id": "${process.env.SITE_PUBLIC_URL}/#person"
+                            "@id": "https://jamiesonroberts.com/#person"
                         }
                     }`,
                 }}
