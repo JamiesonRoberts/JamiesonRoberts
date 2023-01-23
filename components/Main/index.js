@@ -2,18 +2,18 @@ import Image from 'next/image'
 
 import styles from './index.module.css'
 
-import saxx from '../../public/logos/saxx.png'
-import jrBadge from '../../public/jr-badge.png'
+import saxx from '@/public/logos/saxx.png'
+import jrBadge from '@/public/jr-badge.png'
 
-import arcane from '../../public/logos/arcane.png'
-import western from '../../public/logos/western.png'
-import mld from '../../public/logos/mld.png'
+import arcane from '@/public/logos/arcane.png'
+import western from '@/public/logos/western.png'
+import mld from '@/public/logos/mld.png'
 
-import lcl from '../../public/logos/lcl.png'
-import cac from '../../public/logos/cac.png'
-import projectPlay from '../../public/logos/projectPlay.png'
-import learningCode from '../../public/logos/clc.png'
-import amabile from '../../public/logos/amabile.png'
+import lcl from '@/public/logos/lcl.png'
+import cac from '@/public/logos/cac.png'
+import projectPlay from '@/public/logos/projectPlay.png'
+import learningCode from '@/public/logos/clc.png'
+import amabile from '@/public/logos/amabile.png'
 
 export default function Main({ children, ...rest }) {
     return (
