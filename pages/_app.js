@@ -2,7 +2,7 @@ import Head from 'next/head'
 import PlausibleProvider from 'next-plausible'
 import { Roboto_Flex } from '@next/font/google'
 
-import '/styles/styles.css'
+import '@/styles/styles.css'
 
 const roboto = Roboto_Flex({
     variable: '--primary-font',
