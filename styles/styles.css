@@ -4,6 +4,12 @@
     --link-color: #4863A9;
 }
 
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+    img[loading="lazy"] {
+        clip-path: inset(0.6px)
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #1c1c1b;
