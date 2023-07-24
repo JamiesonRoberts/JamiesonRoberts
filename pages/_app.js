@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import PlausibleProvider from 'next-plausible'
-import { Roboto_Flex } from '@next/font/google'
+import { Roboto_Flex } from 'next/font/google'
 
 import '@/styles/styles.css'
 
