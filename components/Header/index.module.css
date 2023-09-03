@@ -5,6 +5,7 @@
     margin: 0 auto 3rem;
     display: block;
     border-radius: 50%;
+    background-color: rgb(245, 245, 245);
 }
 
 .externalLinkList {
