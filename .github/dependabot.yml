@@ -1,0 +1,16 @@
+# `dependabot.yml` file with
+# reviews and an assignee for all npm pull requests
+
+version: 2
+updates:
+  # Keep npm dependencies up to date
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "dependencies"
+    groups:
+      npm:
+        patterns:
+          - "*"
