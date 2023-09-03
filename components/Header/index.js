@@ -1,15 +1,11 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePlausible } from 'next-plausible'
 
 import profilePic from '../../public/headshot.jpg'
 import styles from './index.module.css'
+import TrackableLink from '@/components/TrackableLink'
 
 export default function Header(props) {
-    const plausible = usePlausible()
-
     return (
         <header {...props} className={props.className} role={'banner'}>
             <Image
@@ -42,17 +38,15 @@ export default function Header(props) {
                 <strong>Availability:</strong> Open to projects, let&apos;s
                 chat.
             </p>
-            <a
+            <TrackableLink
                 href={
                     'mailto:hello@jamiesonroberts.com?subject=Lets%20connect%20via%20email%20from%20jamiesonroberts.com'
                 }
                 className={'cta'}
-                onClick={() => {
-                    plausible('Email Button: Click')
-                }}
+                eventName={'Email Button: Click'}
             >
                 Let&apos;s Connect via email
-            </a>
+            </TrackableLink>
             <p style={{ marginBottom: 0 }}>
                 <strong>Other Places to connect with me:</strong>
             </p>
