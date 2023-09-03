@@ -42,7 +42,6 @@ body {
     min-height: calc(100vh - 2rem);
     color: rgb(var(--color));
     background: rgb(var(--background-color));
-    font-family: var(--roboto);
     text-rendering: optimizeLegibility;
 }
 
