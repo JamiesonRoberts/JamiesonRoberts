@@ -1,0 +1,15 @@
+.layout {
+    min-height: calc(100vh - 2rem);
+}
+
+.wrapper {
+    max-width: 55rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.footer {
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 2rem;
+}

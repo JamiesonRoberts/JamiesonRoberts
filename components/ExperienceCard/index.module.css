@@ -1,0 +1,17 @@
+.card {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    line-height: 1.5;
+    flex: 1 1 20rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.company {
+    padding-bottom: 0.5rem;
+    line-height: 1.3;
+}

@@ -59,20 +59,6 @@ a:not(.cta):hover, a:not(.cta):focus {
     color: var(--color);
 }
 
-.layout {
-    min-height: calc(100vh - 2rem);
-}
-
-.wrapper {
-    max-width: 55rem;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-.wrapper + .wrapper {
-    padding-top: 0.5rem;
-}
-
 .cta {
     background-color: var(--link-color);
     color: var(--background-color);
@@ -96,10 +82,4 @@ a:not(.cta):hover, a:not(.cta):focus {
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
-}
-
-.footer {
-    text-align: center;
-    font-size: 0.875rem;
-    line-height: 2rem;
 }

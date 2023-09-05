@@ -1,5 +1,5 @@
 .profileImage {
-    width: 25rem !important;
+    width: 25rem;
     max-width: 100%;
     height: auto;
     margin: 0 auto 3rem;
@@ -14,14 +14,4 @@
     flex-wrap: wrap;
     padding-left: 0;
     gap: 1rem;
-}
-
-.externalLink {
-    display: flex;
-    align-items: center;
-}
-
-.externalLinkSVGIcon {
-    height: 2rem;
-    width: auto;
 }
