@@ -5,6 +5,20 @@ export const metadata = {
     title: "Hi, I'm Jamieson Roberts. I create digital things.",
     description:
         'Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.',
+    openGraph: {
+        type: 'website',
+        url: 'https://jamiesonroberts.com',
+        title: "Hi, I'm Jamieson Roberts. I create digital things.",
+        description:
+            'Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        url: 'https://jamiesonroberts.com',
+        title: "Hi, I'm Jamieson Roberts. I create digital things.",
+        description:
+            'Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.',
+    },
 }
 
 export default function Page() {
