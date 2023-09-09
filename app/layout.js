@@ -1,11 +1,11 @@
-import PlausibleProvider from 'next-plausible'
 import Image from 'next/image'
 import { Roboto_Flex } from 'next/font/google'
+import PlausibleProvider from 'next-plausible'
 
 import Header from '@/components/Header'
 import StructuredData from '@/components/StructuredData'
 
-import './globals.css'
+import '@/components/_globals/globals.css'
 import styles from './layout.module.css'
 
 const roboto = Roboto_Flex({

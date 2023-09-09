@@ -1,3 +1,0 @@
-Sitemap: https://jamiesonroberts.com/sitemap.xml
-User-agent:*
-Disallow:

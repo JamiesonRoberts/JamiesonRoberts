@@ -10,7 +10,7 @@ export const metadata = {
 export default function Page() {
     return (
         <>
-            <section>
+            <section style={{ paddingBottom: '1.5rem' }}>
                 <h2>Experience</h2>
                 <h3>Current</h3>
                 <CardList>
@@ -69,7 +69,7 @@ export default function Page() {
                     />
                 </CardList>
             </section>
-            <section style={{ paddingTop: '1rem' }}>
+            <section>
                 <h2>Community Involvement</h2>
                 <h3>Current</h3>
                 <CardList>

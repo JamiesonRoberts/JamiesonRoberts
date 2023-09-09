@@ -21,7 +21,7 @@ export default function IconLinkListItem({ href, text, viewBox, svgPath }) {
                 >
                     <path fill={'currentColor'} d={svgPath} />
                 </svg>
-                <span className={'sr-only'}>{text} in a new window</span>
+                <span className={styles.srOnly}>{text} in a new window</span>
             </Link>
         </li>
     )

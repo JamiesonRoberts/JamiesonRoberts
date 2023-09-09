@@ -10,8 +10,8 @@ export default function Header() {
         <>
             <Image
                 src={'/headshot.jpg'}
-                width={320}
-                height={320}
+                width={288}
+                height={288}
                 alt='A grayscale image of Jamieson Roberts in a dark collared shirt appearing in front of a white background wall.'
                 className={styles.profileImage}
                 sizes={'(min-width: 480px) 400px, 82vw'}
@@ -40,7 +40,7 @@ export default function Header() {
                 href={
                     'mailto:hello@jamiesonroberts.com?subject=Lets%20connect%20via%20email%20from%20jamiesonroberts.com'
                 }
-                className={'cta'}
+                className={styles.cta}
                 eventName={'Email Button: Click'}
             >
                 Let&apos;s Connect via email
