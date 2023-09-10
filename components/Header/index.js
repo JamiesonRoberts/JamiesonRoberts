@@ -1,6 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
-import TrackableLink from '@/components/TrackableLink'
 import IconLinkListItem from '@/components/IconLinkListItem'
 
 import styles from './index.module.css'
@@ -24,27 +24,26 @@ export default function Header() {
                 engineer with over 15 years professional experience with web and
                 software development. I love to create things digitally.
                 Currently a Senior Front End Developer @{' '}
-                <a
+                <Link
                     href={'https://www.saxxunderwear.com/'}
                     rel={'noopener noreferrer'}
                     target={'_blank'}
                 >
                     SAXX
-                </a>
+                </Link>
             </p>
             <p>
                 <strong>Availability:</strong> Open to projects, let&apos;s
                 chat.
             </p>
-            <TrackableLink
+            <Link
                 href={
                     'mailto:hello@jamiesonroberts.com?subject=Lets%20connect%20via%20email%20from%20jamiesonroberts.com'
                 }
                 className={styles.cta}
-                eventName={'Email Button: Click'}
             >
                 Let&apos;s Connect via email
-            </TrackableLink>
+            </Link>
             <p>
                 <strong>Other Places to connect with me:</strong>
             </p>
