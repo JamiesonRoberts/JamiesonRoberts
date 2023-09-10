@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { Roboto_Flex } from 'next/font/google'
-import PlausibleProvider from 'next-plausible'
 
 import Header from '@/components/Header'
 import StructuredData from '@/components/StructuredData'
@@ -18,14 +17,11 @@ const roboto = Roboto_Flex({
 export default function RootLayout({ children }) {
     return (
         <html lang='en-CA' className={roboto.className}>
-            <PlausibleProvider
-                domain='jamiesonroberts.com'
-                trackOutboundLinks={true}
-            />
             <Script
                 src={
                     'https://static.cloudflareinsights.com/beacon.min.js?token=d6c73f9f91084e9db1cb887915cef431'
                 }
+                strategy={'beforeInteractive'}
             />
             <body>
                 <div className={styles.layout}>
