@@ -7,6 +7,7 @@ import StructuredData from '@/components/StructuredData'
 
 import '@/components/_globals/globals.css'
 import styles from './layout.module.css'
+import Script from 'next/script'
 
 const roboto = Roboto_Flex({
     subsets: ['latin'],
@@ -20,6 +21,11 @@ export default function RootLayout({ children }) {
             <PlausibleProvider
                 domain='jamiesonroberts.com'
                 trackOutboundLinks={true}
+            />
+            <Script
+                src={
+                    'https://static.cloudflareinsights.com/beacon.min.js?token=d6c73f9f91084e9db1cb887915cef431'
+                }
             />
             <body>
                 <div className={styles.layout}>
