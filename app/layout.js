@@ -23,7 +23,7 @@ export const metadata = {
     icons: {
         icon: [
             { url: '/favicon.ico', sizes: '32x32' },
-            { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+            { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
         ],
         apple: '/apple-touch-icon.png',
     },
