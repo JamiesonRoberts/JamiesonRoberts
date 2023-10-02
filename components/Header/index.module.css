@@ -1,10 +1,8 @@
 .profileImage {
-    width: 25rem !important;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.5rem;
     display: block;
     border-radius: 50%;
+    background-color: rgb(245, 245, 245);
 }
 
 .externalLinkList {
@@ -15,12 +13,18 @@
     gap: 1rem;
 }
 
-.externalLink {
-    display: flex;
-    align-items: center;
+.cta {
+    background-color: var(--link-color);
+    color: var(--background-color);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
 }
 
-.externalLinkSVGIcon {
-    height: 2rem;
-    width: auto;
+.cta:hover, .cta:focus {
+    background-color: var(--color);
+    color: var(--link-color);
 }
