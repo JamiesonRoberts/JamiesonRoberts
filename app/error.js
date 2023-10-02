@@ -1,11 +1,9 @@
-import Link from 'next/link'
+'use client'
+
 import Image from 'next/image'
+import Link from 'next/link'
 
-export const metadata = {
-    title: 'Whoops, something went wrong.',
-}
-
-export default function NotFound() {
+export default function Error() {
     return (
         <div
             style={{
@@ -21,7 +19,7 @@ export default function NotFound() {
                 height={75}
                 sizes={'75px'}
             />
-            <h1>404 - Page Not Found</h1>
+            <h1>Whoops - Something didn&apos;t quite go right there</h1>
             <Link href='/'>Return back to the main page</Link>
         </div>
     )
