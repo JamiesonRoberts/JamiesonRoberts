@@ -9,12 +9,18 @@ const roboto = Roboto_Flex({
     display: 'swap',
 })
 
+export const viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    themeColor: [
+        { media: '(prefers-color-scheme: light)', color: '#F7F7F7' },
+        { media: '(prefers-color-scheme: dark)', color: '#1C1C1B' },
+    ],
+    colorScheme: 'dark light',
+}
+
 export const metadata = {
     metadataBase: new URL('https://jamiesonroberts.com'),
-    viewport: {
-        width: 'device-width',
-        initialScale: 1,
-    },
     icons: {
         icon: [
             { url: '/favicon.ico', sizes: '32x32' },
@@ -23,10 +29,6 @@ export const metadata = {
         apple: '/apple-touch-icon.png',
     },
     manifest: '/site.webmanifest',
-    themeColor: [
-        { media: '(prefers-color-scheme: light)', color: '#F7F7F7' },
-        { media: '(prefers-color-scheme: dark)', color: '#1C1C1B' },
-    ],
 }
 
 export default function RootLayout({ children }) {
