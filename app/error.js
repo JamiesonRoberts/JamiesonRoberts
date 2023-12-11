@@ -1,9 +1,16 @@
 'use client'
 
+import { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import * as Sentry from '@sentry/nextjs'
 
-export default function Error() {
+export default function Error({ error }) {
+  useEffect(() => {
+    // Log the error to Sentry
+    Sentry.captureException(error)
+  }, [error])
+
   return (
     <div
       style={{
