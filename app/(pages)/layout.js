@@ -13,7 +13,7 @@ export default function Layout({ children }) {
       </header>
       <main className={styles.wrapper}>{children}</main>
       <footer className={`${styles.wrapper} ${styles.footer}`}>
-        <p>Copyright &copy; 2023 Jamieson Roberts.</p>
+        <p>Copyright &copy; 2024 Jamieson Roberts.</p>
         <Image
           src={'/jr-badge.png'}
           alt='A blue circle with the letters JR in white.'
