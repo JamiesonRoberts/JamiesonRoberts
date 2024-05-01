@@ -6,16 +6,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sentry/nextjs": "^7.91.0",
-    "next": "^14.0.4",
+    "@sentry/nextjs": "^7.112.2",
+    "next": "^14.2.3",
     "next-cloudflare-web-analytics": "^1.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.4",
+    "eslint": "^9.1.1",
+    "eslint-config-next": "14.2.3",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.1.1"
+    "prettier": "^3.2.5"
   }
 }
