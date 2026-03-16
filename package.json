@@ -1,21 +1,31 @@
 {
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "npm run test:eslint && npm run test:stylelint",
+    "test:eslint": "eslint",
+    "test:stylelint": "stylelint",
+    "prepare": "husky"
   },
   "dependencies": {
-    "@sentry/nextjs": "^7.91.0",
-    "next": "^14.0.4",
-    "next-cloudflare-web-analytics": "^1.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "astro": "^6.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-next": "14.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.1.1"
+    "eslint": "^9.39.4",
+    "eslint-plugin-astro": "^1.6.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "neostandard": "^0.13.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
