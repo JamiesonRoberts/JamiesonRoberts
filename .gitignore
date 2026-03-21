@@ -1,9 +1,12 @@
-# next.js build output
-.next
+# build output
+dist/
+# generated types
+.astro/
 
 # dotenv environment variables file (build for Zeit Now)
 .env
 .env.build
+.env.production
 
 # Dependency directories
 node_modules/
@@ -12,12 +15,13 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
 # Sentry
 .sentryclirc
 
-# Sentry
-.sentryclirc
+# macOS-specific files
+.DS_Store
 
-# Sentry
-.sentryclirc
+# jetbrains setting folder
+.idea/
