@@ -19,7 +19,9 @@ const files = import.meta.glob<{ default: ImageMetadata }>(
 )
 const imageSrc = Object.keys(files)?.find((key) => key.includes(src))
 
-if (!files[imageSrc]) return
+if (!files[imageSrc]) {
+  throw new Error(`No image found`)
+}
 
 const titleAttributes = {
   ...(badge && { 'data-badge-text': badge }),

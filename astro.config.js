@@ -30,7 +30,7 @@ export default defineConfig({
           'en-CA': 'en-CA', // The `defaultLocale` value must present in `locales` keys
         },
       },
-      lastmod: new Date().toISOString(),
+      lastmod: new Date(),
     }),
     robotsTxt(),
   ],

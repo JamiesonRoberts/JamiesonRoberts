@@ -1,5 +1,4 @@
 ---
-import { ClientRouter } from 'astro:transitions'
 import Image from 'astro/components/Image.astro'
 import Font from 'astro/components/Font.astro'
 import { CloudflareAnalytics } from 'astro-cloudflare-analytics'
@@ -76,7 +75,6 @@ const year = new Date().getFullYear()
 
     <Font cssVariable='--primary-font' />
     <CloudflareAnalytics token='d6c73f9f91084e9db1cb887915cef431' />
-    <ClientRouter />
   </head>
   <body>
     <header class:list={['header', 'wrapper']}>
