@@ -1,0 +1,296 @@
+---
+import Image from 'astro/components/Image.astro'
+import Font from 'astro/components/Font.astro'
+import { CloudflareAnalytics } from 'astro-cloudflare-analytics'
+
+import '../styles/global.scss'
+
+import badge from '../assets/logos/jr-badge.png'
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const locale = Astro.currentLocale
+const openGraphLocale = locale.replace('-', '_')
+
+const defaultSiteImage = new URL('sharing-image.jpg', Astro.site)
+const defaultSiteImageAlt = 'A photo of Jamieson Roberts'
+
+const { seo } = Astro.props
+
+const year = new Date().getFullYear()
+---
+
+<!doctype html>
+<html lang={locale ?? 'en-CA'}>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+
+    <title>{seo?.title}</title>
+    <meta name='description' content={seo?.description} />
+    <link rel='canonical' href={canonicalURL} />
+    <link rel='sitemap' href='/sitemap-index.xml' />
+
+    <meta property='og:title' content={seo?.title} />
+    <meta property='og:description' content={seo?.description} />
+    <meta property='og:locale' content={openGraphLocale ?? 'en_CA'} />
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={canonicalURL} />
+    <meta property='og:image' content={seo?.image ?? defaultSiteImage} />
+    <meta
+      property='og:image:alt'
+      content={seo?.imageAlt ?? defaultSiteImageAlt}
+    />
+
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:creator' content='@JamiesonRoberts' />
+    <meta name='twitter:title' content={seo?.title} />
+    <meta
+      name='twitter:description'
+      content={seo?.description ?? seo?.description}
+    />
+    <meta name='twitter:image' content={seo?.image ?? defaultSiteImage} />
+    <meta
+      name='twitter:image:alt'
+      content={seo?.imageAlt ?? defaultSiteImageAlt}
+    />
+
+    <meta
+      name='theme-color'
+      media='(prefers-color-scheme: light)'
+      content='#F7F7F7'
+    />
+    <meta
+      name='theme-color'
+      media='(prefers-color-scheme: dark)'
+      content='#1C1C1B'
+    />
+    <meta name='color-scheme' content='dark light' />
+
+    <link rel='icon' href='/favicon.ico' sizes='any' />
+    <link rel='icon' href='/icon.svg' type='image/svg+xml' />
+    <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+
+    <link rel='manifest' href='/manifest.webmanifest' />
+
+    <Font cssVariable='--primary-font' />
+    <CloudflareAnalytics token='d6c73f9f91084e9db1cb887915cef431' />
+  </head>
+  <body>
+    <header class:list={['header', 'wrapper']}>
+      <Image
+        src={badge}
+        width={60}
+        alt='A blue circle badge with the letters JR in white'
+        priority
+        class:list={'logo'}
+      />
+      <nav class:list={'main-nav'}>
+        <ul>
+          <li class:list={'navItem'}>
+            <a href='/'>About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <slot />
+
+    <footer class:list={['footer', 'wrapper']}>
+      <p>
+        Copyright &copy; {year} Jamieson Roberts.
+      </p>
+      <Image
+        src={badge}
+        alt='A blue circle with the letters JR in white.'
+        width={75}
+        height={75}
+        sizes={'75px'}
+      />
+    </footer>
+
+    <script
+      type='application/ld+json'
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ProfilePage',
+        mainEntity: {
+          '@id': `${Astro.site.href}#person`,
+          '@type': 'Person',
+          name: 'Jamieson Roberts',
+        },
+      })}
+    />
+    <script
+      type='application/ld+json'
+      set:html={JSON.stringify({
+        '@context': 'https://www.schema.org',
+        '@type': 'Person',
+        '@id': `${Astro.site.href}#person`,
+        name: 'Jamieson Roberts',
+        nationality: 'Canadian',
+        hasOfferCatalog: {
+          '@id': '#OfferCatalog',
+        },
+        alumniOf: [
+          {
+            '@type': 'CollegeOrUniversity',
+            name: 'Western University',
+            sameAs: 'https://www.uwo.ca/',
+          },
+        ],
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'degree',
+            educationalLevel: 'Bachelor',
+            about: {
+              '@type': 'EducationalOccupationalProgram',
+              educationalCredentialAwarded: 'Bachelor of Musical Arts - Music',
+              startDate: '2005',
+              endDate: '2010',
+              provider: {
+                '@type': 'CollegeOrUniversity',
+                name: 'The University of Western Ontario',
+                sameAs: 'https://uwo.ca',
+              },
+            },
+          },
+        ],
+        gender: 'Male',
+        description:
+          'Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.',
+        jobTitle: 'Senior Web Developer',
+        worksFor: [
+          {
+            '@type': 'Organization',
+            name: 'SAXX',
+            sameAs: [
+              'https://www.saxxunderwear.com/',
+              'https://www.saxxunderwear.ca/',
+              'https://www.saxxunderwear.eu/',
+              'https://www.linkedin.com/company/saxx-underwear-co-',
+            ],
+            member: {
+              '@type': 'EmployeeRole',
+              member: {
+                '@type': 'Person',
+                name: 'Jamieson Roberts',
+              },
+              roleName: 'Senior Front End Developer',
+              startDate: '2021-02',
+            },
+          },
+          {
+            '@type': 'Organization',
+            name: 'Jamieson Roberts',
+            description: 'Freelance Web Developer',
+            founder: {
+              '@id': `${Astro.site.href}#person`,
+              '@type': 'Person',
+              name: 'Jamieson Roberts',
+            },
+            foundingDate: '2009-05',
+          },
+        ],
+        url: Astro.site.href,
+        email: 'hello@jamiesonroberts.com',
+        image:
+          'https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'London',
+          addressRegion: 'ON',
+          addressCountry: 'Canada',
+        },
+        sameAs: [
+          'https://bsky.app/profile/jamiesonroberts.bsky.social',
+          'https://www.reddit.com/user/jamiesonroberts/',
+          'https://x.com/jamiesonroberts',
+          'https://github.com/JamiesonRoberts',
+          'https://dev.to/jamiesonroberts',
+          'https://www.linkedin.com/in/jamiesonroberts',
+          'https://www.facebook.com/jamieson.roberts/',
+          'https://www.instagram.com/jamiesonroberts/',
+          'https://steamcommunity.com/id/jedispara/',
+          'https://www.twitch.tv/jedispara',
+        ],
+      })}
+    />
+    <script
+      type='application/ld+json'
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'OfferCatalog',
+        '@id': `${Astro.site.href}#OfferCatalog`,
+        name: 'Web Development and Consulting',
+        itemListElement: [
+          {
+            '@type': 'OfferCatalog',
+            name: 'Web and Software Development',
+            itemListElement: [
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Shopify Theme and App Development',
+                },
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Wordpress Development',
+                },
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Software and App Development',
+                },
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Technical SEO Consulting and Optimization',
+                },
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Page Speed Optimization',
+                },
+              },
+            ],
+          },
+        ],
+      })}
+    />
+    <script
+      type='application/ld+json'
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        '@id': `${Astro.site.href}#website`,
+        url: Astro.site.href,
+        image:
+          'https://s.gravatar.com/avatar/0a53dca8faa5b427a1bed8f775100b83?s=900',
+        inLanguage: 'en-CA',
+        author: {
+          '@id': `${Astro.site.href}#person`,
+          '@type': 'Person',
+          name: 'Jamieson Roberts',
+        },
+        accountablePerson: {
+          '@id': `${Astro.site.href}#person`,
+        },
+        about: {
+          '@id': `${Astro.site.href}#person`,
+        },
+      })}
+    />
+  </body>
+</html>

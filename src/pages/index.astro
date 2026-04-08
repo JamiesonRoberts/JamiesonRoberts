@@ -1,24 +1,321 @@
 ---
+import Image from 'astro/components/Image.astro'
 
+import Layout from '../layouts/Layout.astro'
+
+import headshot from '../assets/headshot.jpg'
+import IconLinkListItem from '../components/IconLinkListItem.astro'
+import ExperienceCard from '../components/ExperienceCard.astro'
+
+const seo = {
+  title: "Hi, I'm Jamieson Roberts. I create digital things.",
+  description:
+    'Parent, bicycle rider, geek, a video and board gamer, beer aficionado, coffee addict, and sci-fi junky. I love to create things digitally.',
+}
 ---
 
-<html lang='en'>
-  <head>
-    <meta charset='utf-8' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <link rel='icon' href='/favicon.ico' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro - testing</h1>
-    <p>Testing content</p>
-  </body>
+<Layout seo={seo}>
+  <main class:list={'main'}>
+    <section class:list={'wrapper'}>
+      <div class:list={'image-intro'}>
+        <Image
+          src={headshot}
+          width={250}
+          alt='Jamieson Roberts in a dark collared shirt appearing in front of a white background wall.'
+          priority
+          class:list={'headshot'}
+        />
+        <div>
+          <h1>Hi, I'm Jamieson Roberts.</h1>
+          <p>
+            Parent, bicycle rider, geek, a video and board gamer, beer
+            aficionado, coffee addict, and sci-fi junky. Full time software
+            engineer with over 15 years professional experience with web and
+            software development. I love to create things digitally.
+          </p>
+        </div>
+      </div>
+      <p>
+        <strong>Availability:</strong> Open and accepting projects for all things
+        Shopify as well as custom web and app development, let's chat.
+      </p>
+      <p class:list={'flex-list'}>
+        <a
+          href={'mailto:hello@jamiesonroberts.com?subject=Lets%20connect%20via%20email%20from%20jamiesonroberts.com'}
+        >
+          Connect via email
+        </a>
+        or
+        <a href='https://www.linkedin.com/in/jamiesonroberts'
+          >Connect via LinkedIn</a
+        >
+      </p>
+      <aside>
+        <p>
+          <strong>Other Places to connect with me:</strong>
+        </p>
+        <nav
+          aria-label={'A list of other websites and services that Jamieson is active on, links will open new tabs or windows.'}
+          class:list={'flex-list'}
+        >
+          <IconLinkListItem
+            iconName='github'
+            title='GitHub'
+            url='https://github.com/JamiesonRoberts'
+          />
+          <IconLinkListItem
+            iconName='dev'
+            title='Dev.to'
+            url='https://dev.to/jamiesonroberts'
+          />
+          <IconLinkListItem
+            iconName='linkedin'
+            title='LinkedIn'
+            url='https://www.linkedin.com/in/jamiesonroberts'
+          />
+          <IconLinkListItem
+            iconName='bluesky'
+            title='BlueSky'
+            url='https://bsky.app/profile/jamiesonroberts.bsky.social'
+          />
+          <IconLinkListItem
+            iconName='facebook'
+            title='Facebook'
+            url='https://www.facebook.com/jamieson.roberts/'
+          />
+          <IconLinkListItem
+            iconName='instagram'
+            title='Instagram'
+            url='https://www.instagram.com/jamiesonroberts/'
+          />
+          <IconLinkListItem
+            iconName='reddit'
+            title='Reddit'
+            url='https://www.reddit.com/user/jamiesonroberts/'
+          />
+          <IconLinkListItem
+            iconName='steam'
+            title='Steam'
+            url='https://steamcommunity.com/id/jedispara/'
+          />
+          <IconLinkListItem
+            iconName='twitch'
+            title='Twitch.tv'
+            url='https://www.twitch.tv/jedispara'
+          />
+        </nav>
+      </aside>
+    </section>
+    <section class:list={'wrapper'}>
+      <h2>Experience</h2>
+      <p>
+        My current work is in the e-Commerce space, specializing in all things
+        related to Shopify &mdash; themes, custom apps, data architecture, seo,
+        integrations, and everything else related. I have extensive background
+        in design and development crossing between web and native applications.
+      </p>
+      <h3>Current</h3>
+      <div class:list={'experience-list'}>
+        <ExperienceCard
+          company={'SAXX'}
+          image={{
+            src: '/logos/saxx.png',
+            alt: 'SAXX logo',
+            priority: true,
+          }}
+          title={'Senior Front-End Developer'}
+          type={'Permanent Full-Time &ndash; Remote'}
+          date={{
+            start: new Date('February 2021'),
+            current: true,
+          }}
+        />
+        <ExperienceCard
+          company={'Jamieson Roberts'}
+          image={{
+            src: '/jr-badge.png',
+            alt: 'A blue circle with the letters JR in white',
+            priority: true,
+          }}
+          title={'Self-Employed'}
+          date={{
+            start: new Date('May 2009'),
+            current: true,
+          }}
+        />
+      </div>
+      <h3>Previous</h3>
+      <div class:list={'experience-list'}>
+        <ExperienceCard
+          company={'Arcane'}
+          image={{
+            src: '/logos/arcane.png',
+            alt: 'Arcane Digital logo',
+          }}
+          title={'Senior Web Developer'}
+          type={'Permanent Full-Time &ndash; Hybrid'}
+          date={{
+            start: new Date('February 2015'),
+            end: new Date('February 2021'),
+          }}
+        />
+        <ExperienceCard
+          company={'Western University'}
+          image={{
+            src: '/logos/western.png',
+            alt: 'Western University (UWO) shield',
+            height: 91,
+          }}
+          title={'Web Developer'}
+          type={'Contract Full-Time &ndash; On-site'}
+          date={{
+            start: new Date('August 2014'),
+            end: new Date('February 2015'),
+          }}
+        />
+        <ExperienceCard
+          company={'MLD Solutions'}
+          image={{
+            src: '/logos/mld.png',
+            alt: 'MLD Solutions logo',
+          }}
+          title={'Programmer'}
+          type={'Contract Part-Time &ndash; On-Site'}
+          date={{
+            start: new Date('April 2011'),
+            end: new Date('September 2011'),
+          }}
+        />
+      </div>
+    </section>
+    <section class:list={['wrapper']}>
+      <h2>Community Involvement</h2>
+      <p>
+        Giving back and trying to help my local community is something that has
+        always been deeply important to me. Currently I'm involved in local
+        advocacy around helping improve cycling infrastructure as well as
+        encouraging others to take up cycling as a form of transportation.
+      </p>
+      <h3>Current</h3>
+      <div class:list={'experience-list'}>
+        <ExperienceCard
+          company='London Cycle Link'
+          image={{
+            src: '/logos/lcl.png',
+            alt: 'London Cycle Link logo',
+          }}
+          title='Advocacy Committee Member'
+          date={{
+            start: new Date('July 2022'),
+            current: true,
+          }}
+          badge='Politics'
+        />
+      </div>
+      <h3>Previous</h3>
+      <div class:list={'experience-list'}>
+        <ExperienceCard
+          company={'City of London Cycling Advisory Committee'}
+          image={{
+            src: '/logos/cac.png',
+            alt: 'City of London, Canada logo',
+          }}
+          title={'Committee Chair'}
+          date={{
+            start: new Date('August 2019'),
+            end: new Date('April 2022'),
+          }}
+          badge='Politics'
+        />
+        <ExperienceCard
+          company={'Project Play'}
+          image={{
+            src: '/logos/projectPlay.png',
+            alt: 'The logo for Project Play',
+          }}
+          title={'Event Coordinator'}
+          date={{
+            start: new Date('September 2012'),
+            end: new Date('September 2017'),
+          }}
+          badge='Community Fundraising'
+        />
+        <ExperienceCard
+          company={`
+            Canada Learning Code <br />
+            <small>(Formerly Ladies Learning Code)</small>`}
+          image={{
+            src: '/logos/clc.png',
+            alt: 'Canada Learning Code logo',
+          }}
+          title={'Mentor'}
+          date={{
+            start: new Date('January 2013'),
+            end: new Date('January 2014'),
+          }}
+          badge='Education'
+        />
+        <ExperienceCard
+          company={'Amabile Boys and Men&apos;s Choirs'}
+          image={{
+            src: '/logos/amabile.png',
+            alt: 'Amabile Choirs of London, Canada logo',
+          }}
+          title={'Choir Co-Manager for Primus'}
+          date={{
+            start: new Date('September 2010'),
+            end: new Date('May 2014'),
+          }}
+          badge='Arts'
+        />
+      </div>
+    </section>
+  </main>
+</Layout>
 
-  <style lang='scss'>
-    h1 {
-      color: red;
+<style lang='scss'>
+  .main {
+    .image-intro {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      @media (width >= 56.25rem) {
+        flex-direction: row;
+        gap: 1rem;
+      }
     }
-  </style>
-</html>
+
+    .headshot {
+      border-radius: 50%;
+      margin: 1.25rem;
+      max-width: 60%;
+      height: auto;
+    }
+
+    .flex-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .experience-list {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 2rem;
+
+      @media (width >= 37.5rem) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (width >= 56.25rem) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+</style>

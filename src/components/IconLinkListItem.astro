@@ -1,0 +1,66 @@
+---
+import { parse } from 'node-html-parser'
+
+function getSVG(iconName: string) {
+  const files = import.meta.glob<string>('/src/assets/icons/*.svg', {
+    query: '?raw',
+    eager: true,
+    import: 'default',
+  })
+
+  const icon = Object.keys(files)?.find((key) => key.includes(iconName))
+
+  if (!icon) {
+    throw new Error(`${iconName} not found`)
+  }
+
+  const root = parse(files[icon])
+
+  root
+    .querySelectorAll('path')
+    .forEach((ele) => ele.setAttribute('fill', 'currentColor'))
+
+  const svg = root.querySelector('svg')
+  const { attributes, innerHTML } = svg
+
+  return {
+    attributes,
+    innerHTML,
+  }
+}
+
+const { iconName, url, title } = Astro.props
+
+if (!iconName) {
+  throw new Error(`An icon name prop is required`)
+}
+
+const { attributes: baseAttributes, innerHTML } = getSVG(iconName)
+---
+
+<a
+  href={url}
+  target='_blank'
+  rel='noopener noreferrer'
+  class:list={['link']}
+  title=`Connect with Jamieson on ${title}`
+  aria-label=`Connect with Jamieson on ${title} (link opens a new window)`
+>
+  <svg {...baseAttributes} set:html={innerHTML} class:list={['svg-icon']} />
+</a>
+
+<style lang='scss'>
+  .link {
+    display: flex;
+    align-items: center;
+  }
+
+  .svg-icon {
+    height: 2.5rem;
+    width: auto;
+
+    path {
+      fill: currentColor;
+    }
+  }
+</style>
