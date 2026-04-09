@@ -1,5 +1,5 @@
 ---
-import Image from 'astro/components/Image.astro'
+import { Image } from 'astro:assets'
 
 import Layout from '../layouts/Layout.astro'
 
@@ -22,7 +22,7 @@ const seo = {
           src={headshot}
           width={250}
           alt='Jamieson Roberts in a dark collared shirt appearing in front of a white background wall.'
-          priority
+          priority={true}
           class:list={'headshot'}
         />
         <div>

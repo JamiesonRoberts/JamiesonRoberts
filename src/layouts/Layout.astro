@@ -1,6 +1,5 @@
 ---
-import Image from 'astro/components/Image.astro'
-import Font from 'astro/components/Font.astro'
+import { Image, Font } from 'astro:assets'
 import { CloudflareAnalytics } from 'astro-cloudflare-analytics'
 
 import '../styles/global.scss'
@@ -82,7 +81,7 @@ const year = new Date().getFullYear()
         src={badge}
         width={60}
         alt='A blue circle badge with the letters JR in white'
-        priority
+        priority={true}
         class:list={'logo'}
       />
       <nav class:list={'main-nav'}>
