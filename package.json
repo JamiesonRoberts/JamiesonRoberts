@@ -11,9 +11,11 @@
     "test": "npm run test:eslint && npm run test:stylelint",
     "test:eslint": "eslint '**/*.{astro,js}'",
     "test:stylelint": "stylelint '**/*.{astro,scss,css}'",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate-types": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^13.1.8",
     "@astrojs/sitemap": "^3.7.1",
     "astro": "^6.0.0",
     "astro-cloudflare-analytics": "^1.0.1",
@@ -36,6 +38,7 @@
     "stylelint": "^17.5.0",
     "stylelint-config-astro": "^2.0.0",
     "stylelint-config-standard-scss": "^17.0.0",
-    "stylelint-scss": "^7.0.0"
+    "stylelint-scss": "^7.0.0",
+    "wrangler": "^4.81.1"
   }
 }

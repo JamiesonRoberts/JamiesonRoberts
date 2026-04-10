@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap'
 
 import robotsTxt from 'astro-robots-txt'
 
+import cloudflare from '@astrojs/cloudflare'
+
 export default defineConfig({
   site: 'https://jamiesonroberts.com',
 
@@ -34,4 +36,10 @@ export default defineConfig({
     }),
     robotsTxt(),
   ],
+
+  output: 'static',
+
+  adapter: cloudflare({
+    imageService: 'compile',
+  }),
 })
