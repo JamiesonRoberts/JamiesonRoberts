@@ -16,7 +16,14 @@ const defaultSiteImageAlt = 'A photo of Jamieson Roberts'
 
 const { seo } = Astro.props
 
-const year = new Date().getFullYear()
+const date = new Date()
+const year = date.getFullYear()
+const month =
+  date.getMonth().toString().length < 2 ?
+    `0${date.getMonth() + 1}`
+  : date.getMonth() + 1
+const day =
+  date.getDate().toString().length < 2 ? `0${date.getDate()}` : date.getDate()
 ---
 
 <!doctype html>
@@ -27,6 +34,9 @@ const year = new Date().getFullYear()
 
     <title>{seo?.title}</title>
     <meta name='description' content={seo?.description} />
+    <meta name='robots' content='index, follow' />
+    <meta name='last-modified' content={`${year}-${month}-${day}`} />
+
     <link rel='canonical' href={canonicalURL} />
     <link rel='sitemap' href='/sitemap-index.xml' />
 
@@ -73,7 +83,9 @@ const year = new Date().getFullYear()
     <link rel='manifest' href='/manifest.webmanifest' />
 
     <Font cssVariable='--primary-font' />
-    <CloudflareAnalytics token='d6c73f9f91084e9db1cb887915cef431' />
+    <CloudflareAnalytics
+      token={import.meta.env.PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN}
+    />
   </head>
   <body>
     <header class:list={['header', 'wrapper']}>

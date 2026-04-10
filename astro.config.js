@@ -1,14 +1,9 @@
 import { defineConfig, fontProviders } from 'astro/config'
-
 import sitemap from '@astrojs/sitemap'
-
+import cloudflare from '@astrojs/cloudflare'
 import robotsTxt from 'astro-robots-txt'
 
-import cloudflare from '@astrojs/cloudflare'
-
 export default defineConfig({
-  site: 'https://jamiesonroberts.com',
-
   fonts: [
     {
       provider: fontProviders.google(),
@@ -18,6 +13,8 @@ export default defineConfig({
       subsets: ['latin'],
     },
   ],
+
+  site: 'https://jamiesonroberts.com',
 
   i18n: {
     locales: ['en-CA'],
