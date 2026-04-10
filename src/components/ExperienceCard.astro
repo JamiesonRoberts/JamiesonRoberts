@@ -1,0 +1,112 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image } from 'astro:assets'
+
+const {
+  image: { src, alt },
+  company,
+  title,
+  type = null,
+  date: { start, end = null, current = false },
+  badge = null,
+} = Astro.props
+
+if (!src) {
+  throw new Error(`An image name prop is required`)
+}
+
+const files = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/logos/*.{jpeg,jpg,png,gif}',
+)
+const imageSrc = Object.keys(files)?.find((key) => key.includes(src))
+
+if (!files[imageSrc]) {
+  throw new Error(`No image found`)
+}
+
+const titleAttributes = {
+  ...(badge && { 'data-badge-text': badge }),
+}
+---
+
+<article class:list={'card'}>
+  <Image src={files[imageSrc]()} alt={alt} width={60} />
+  <div class:list={'content'}>
+    <h4 class:list={'title'} set:html={title} {...titleAttributes} />
+    <p class:list={'company'} set:html={company} />
+    {type && <p class:list={'role-type'} set:html={type} />}
+    <p class:list={'time-frame'}>
+      <time
+        datetime={start.toLocaleDateString('en-CA', {
+          year: 'numeric',
+          month: '2-digit',
+        })}
+        set:html={new Intl.DateTimeFormat('en-CA', {
+          year: 'numeric',
+          month: 'long',
+        }).format(start)}
+      /> &mdash;
+      {
+        end && (
+          <time
+            datetime={end.toLocaleDateString('en-CA', {
+              year: 'numeric',
+              month: '2-digit',
+            })}
+            set:html={new Intl.DateTimeFormat('en-CA', {
+              year: 'numeric',
+              month: 'long',
+            }).format(end)}
+          />
+        )
+      }
+      {current && 'Present'}
+    </p>
+  </div>
+
+  <style lang='scss'>
+    .card {
+      list-style: none;
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .content {
+      .company,
+      .role-type,
+      .time-frame,
+      .title {
+        margin: 0;
+      }
+
+      .company {
+        padding-bottom: 0.5rem;
+      }
+
+      .title {
+        line-height: 1.2;
+        padding-bottom: 0.375rem;
+        font-size: 1.0625rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0 0.5rem;
+
+        &[data-badge-text]::after {
+          font-size: 0.625rem;
+          font-weight: normal;
+          padding: 0.25rem 0.5rem;
+          background: var(--background-color-1);
+          border-radius: 1rem;
+          line-height: 0.625rem;
+          content: attr(data-badge-text);
+        }
+      }
+
+      .role-type,
+      .time-frame {
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</article>
