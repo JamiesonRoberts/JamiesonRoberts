@@ -1,6 +1,5 @@
 import { defineConfig, fontProviders } from 'astro/config'
 import sitemap from '@astrojs/sitemap'
-import cloudflare from '@astrojs/cloudflare'
 import robotsTxt from 'astro-robots-txt'
 
 export default defineConfig({
@@ -35,8 +34,4 @@ export default defineConfig({
   ],
 
   output: 'static',
-
-  adapter: cloudflare({
-    imageService: 'compile',
-  }),
 })
