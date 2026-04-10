@@ -30,12 +30,7 @@ const titleAttributes = {
 ---
 
 <article class:list={'card'}>
-  <Image
-    src={files[imageSrc]()}
-    alt={alt}
-    width={60}
-    class:list={'experienceCardLogo'}
-  />
+  <Image src={files[imageSrc]()} alt={alt} width={60} />
   <div class:list={'content'}>
     <h4 class:list={'title'} set:html={title} {...titleAttributes} />
     <p class:list={'company'} set:html={company} />
