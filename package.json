@@ -1,4 +1,7 @@
 {
+  "name": "jamieson-roberts",
+  "version": "3.0.0",
+  "private": true,
   "type": "module",
   "engines": {
     "node": ">=22.12.0"
