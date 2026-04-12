@@ -1,6 +1,5 @@
 ---
 import { Image, Font } from 'astro:assets'
-import { CloudflareAnalytics } from 'astro-cloudflare-analytics'
 
 import '../styles/global.scss'
 
@@ -82,9 +81,6 @@ const day =
     <link rel='manifest' href='/manifest.webmanifest' />
 
     <Font cssVariable='--primary-font' />
-    <CloudflareAnalytics
-      token={import.meta.env.PUBLIC_CLOUDFLARE_ANALYTICS_TOKEN}
-    />
   </head>
   <body>
     <header class:list={['header', 'wrapper']}>

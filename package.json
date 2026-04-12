@@ -17,7 +17,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
     "astro": "^6.0.0",
-    "astro-cloudflare-analytics": "^1.0.1",
     "astro-robots-txt": "^1.0.0"
   },
   "devDependencies": {
