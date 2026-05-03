@@ -1,9 +1,9 @@
 ---
 import { Image, Font } from 'astro:assets'
 
-import '../styles/global.scss'
+import '@/styles/global.scss'
 
-import badge from '../assets/logos/jr-badge.png'
+import badge from '@/assets/logos/jr-badge.png'
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
@@ -16,7 +16,6 @@ const defaultSiteImageAlt = 'A photo of Jamieson Roberts'
 const { seo } = Astro.props
 
 const date = new Date()
-const year = date.getFullYear()
 ---
 
 <!doctype html>
@@ -97,7 +96,7 @@ const year = date.getFullYear()
 
     <footer class:list={['footer', 'wrapper']}>
       <p>
-        Copyright &copy; {year} Jamieson Roberts.
+        Copyright &copy; {date.getFullYear()} Jamieson Roberts.
       </p>
       <Image
         src={badge}
