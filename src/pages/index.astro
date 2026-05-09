@@ -3,9 +3,9 @@ import { Image } from 'astro:assets'
 
 import Layout from '@/layouts/Layout.astro'
 
-import headshot from '@/assets/headshot.jpg'
-import IconLinkListItem from '@/components/IconLinkListItem.astro'
 import ExperienceCard from '@/components/ExperienceCard.astro'
+
+import headshot from '@/assets/headshot.jpg'
 
 const seo = {
   title: "Hi, I'm Jamieson Roberts. I create digital things.",
@@ -50,61 +50,6 @@ const seo = {
           >Connect via LinkedIn</a
         >
       </p>
-      <aside>
-        <p>
-          <strong>Other Places to connect with me:</strong>
-        </p>
-        <nav
-          aria-label={'A list of other websites and services that Jamieson is active on, links will open new tabs or windows.'}
-          class:list={'flex-list'}
-        >
-          <IconLinkListItem
-            iconName='github'
-            title='GitHub'
-            url='https://github.com/JamiesonRoberts'
-          />
-          <IconLinkListItem
-            iconName='dev'
-            title='Dev.to'
-            url='https://dev.to/jamiesonroberts'
-          />
-          <IconLinkListItem
-            iconName='linkedin'
-            title='LinkedIn'
-            url='https://www.linkedin.com/in/jamiesonroberts'
-          />
-          <IconLinkListItem
-            iconName='bluesky'
-            title='BlueSky'
-            url='https://bsky.app/profile/jamiesonroberts.bsky.social'
-          />
-          <IconLinkListItem
-            iconName='facebook'
-            title='Facebook'
-            url='https://www.facebook.com/jamieson.roberts/'
-          />
-          <IconLinkListItem
-            iconName='instagram'
-            title='Instagram'
-            url='https://www.instagram.com/jamiesonroberts/'
-          />
-          <IconLinkListItem
-            iconName='reddit'
-            title='Reddit'
-            url='https://www.reddit.com/user/jamiesonroberts/'
-          />
-          <IconLinkListItem
-            iconName='steam'
-            title='Steam'
-            url='https://steamcommunity.com/id/jedispara/'
-          />
-          <IconLinkListItem
-            iconName='twitch'
-            title='Twitch.tv'
-            url='https://www.twitch.tv/jedispara'
-          />
-        </nav>
-      </aside>
     </section>
     <section class:list={'wrapper'}>
       <h2>Experience</h2>
@@ -292,13 +237,6 @@ const seo = {
       margin: 1.25rem;
       max-width: 60%;
       height: auto;
-    }
-
-    .flex-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
     }
 
     .experience-list {

@@ -3,6 +3,8 @@ import { Image, Font } from 'astro:assets'
 
 import '@/styles/global.scss'
 
+import IconLinkListItem from '@/components/IconLinkListItem.astro'
+
 import badge from '@/assets/logos/jr-badge.png'
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
@@ -98,13 +100,21 @@ const date = new Date()
       <p>
         Copyright &copy; {date.getFullYear()} Jamieson Roberts.
       </p>
-      <Image
-        src={badge}
-        alt='A blue circle with the letters JR in white.'
-        width={75}
-        height={75}
-        sizes={'75px'}
-      />
+      <nav
+        aria-label={'A list of other websites and services that Jamieson is active on, links will open new tabs or windows.'}
+        class:list={'flex-list'}
+      >
+        <IconLinkListItem
+          iconName='github'
+          title='GitHub'
+          url='https://github.com/JamiesonRoberts'
+        />
+        <IconLinkListItem
+          iconName='linkedin'
+          title='LinkedIn'
+          url='https://www.linkedin.com/in/jamiesonroberts'
+        />
+      </nav>
     </footer>
 
     <script
